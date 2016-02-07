@@ -1,0 +1,41 @@
+span.menu {
+  cursor: pointer;
+  color: blue;
+  font-family: veranda, tahoma, sans-serif;
+  font-size: 12px;
+}
+
+span.menu:hover {
+  text-decoration: underline;
+}
+
+a.menu {
+   text-decoration: none;
+   font-family: veranda, tahoma, sans-serif;
+   font-size: 12px;
+   border-color: #F0F0F0;
+   border-style: solid;
+   border-width: 1px;
+   padding:  0px 5px 0px 5px;
+}
+
+a.menu:hover {
+   background-color: #B0F000;
+   background-color: #FFFFFF;
+   border-color: #000000;
+   border-style: outset;
+}
+
+
+body {
+   font-family: veranda, tahoma, sans-serif;
+   font-size: 12px;
+}
+
+body.menu {
+   font-family: veranda, tahoma, sans-serif;
+   font-size: 12px;
+   background-color: #EEEEEE;
+}
+
+

@@ -1,0 +1,58 @@
+/**
+\mainpage 
+
+Data Acquisition System of the new (g-2) experiment.
+
+
+- \ref page_frontends
+  - \ref page_synchronization "Synchronization"
+  - \ref group_equipment
+- \ref group_drivers
+- \ref group_slowcont
+- \ref group_banks 
+- \ref group_analyzer "Analyzer"
+  - \ref group_analyzer_modules "Analyzer modules"
+
+
+\defgroup page_frontends Frontends
+@addtogroup page_frontends
+@{
+@brief frontends 
+@details
+Frontends in (g-2) provides control and readout of
+detector electronics.
+@}
+
+\defgroup group_slowcont Slow Control
+@{
+Slow control layer in (g-2) DAQ provides control and
+monitoring of various hardware components.
+@}
+
+\defgroup group_banks MIDAS data banks
+The list of MIDAS data banks
+
+\defgroup group_equipment Equipment
+Equipment in ODB
+
+\defgroup threads Threads
+
+\defgroup group_analyzer Analyser
+@{
+On-line and off-line analyzers will be documented here...
+@}
+
+\defgroup group_drivers Drivers
+@{
+@brief Hardware drivers
+@}
+
+\defgroup group_analyzer_modules Analyzer modules
+@{
+@brief Analyzer modules
+@}
+
+
+*/
+
+

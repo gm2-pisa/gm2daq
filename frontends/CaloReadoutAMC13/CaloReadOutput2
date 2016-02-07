@@ -1,0 +1,1869 @@
+Frontend name          :     AMC1301
+Event buffer size      :     268435456
+User max event size    :     33554432
+# of events per buffer :     8
+
+about to do amc13_ODB_init()
+amc13_ODB_init(178): /Equipment/AMC1301/Settings/Globals sync 0
+amc13_ODB_init(179): /Equipment/AMC1301/Settings/Globals TQ methods 0
+amc13_ODB_init(180): /Equipment/AMC1301/Settings/Globals raw data store 1
+amc13_ODB_init(181): /Equipment/AMC1301/Settings/Globals raw data prescale 1
+amc13_ODB_init(182): /Equipment/AMC1301/Settings/Globals raw data prescale offset 1
+amc13_ODB_init(183): /Equipment/AMC1301/Settings/Globals histogram data store 0
+amc13_ODB_init(184): /Equipment/AMC1301/Settings/Globals histogram data flush  1
+amc13_ODB_init(185): /Equipment/AMC1301/Settings/Globals histogram data flush offset 1
+amc13_ODB_init(215): /Equipment/AMC1301/Settings/Link01 enabled 1
+amc13_ODB_init(216): /Equipment/AMC1301/Settings/Link01 enabled 51723
+amc13_ODB_init(217): /Equipment/AMC1301/Settings/Link01 enabled 192.168.3.6
+amc13_ODB_init(218): /Equipment/AMC1301/Settings/Link01 enabled fe01
+amc13_ODB_init(247): /Equipment/AMC1301/Settings/AMC13 header size 4096
+amc13_ODB_init(248): /Equipment/AMC1301/Settings/AMC13 amc data size 25171760
+amc13_ODB_init(249): /Equipment/AMC1301/Settings/AMC13 tail size 8
+amc13_ODB_init(250): /Equipment/AMC1301/Settings/AMC13 rawmax size 512
+amc13_ODB_init(252): /Equipment/AMC1301/Settings/AMC13 serial no 33
+amc13_ODB_init(253): /Equipment/AMC1301/Settings/AMC13 slot no 13
+amc13_ODB_init(254): /Equipment/AMC1301/Settings/AMC13 using control hub 0
+amc13_ODB_init(255): /Equipment/AMC1301/Settings/AMC13 T2 ip 192.168.1.188
+amc13_ODB_init(256): /Equipment/AMC1301/Settings/AMC13 T1 ip 192.168.1.189
+amc13_ODB_init(257): /Equipment/AMC1301/Settings/AMC13 addr tab1 /home/daq/DAQ/amc13/map/AMC13_AddressTable_S6.xml
+amc13_ODB_init(258): /Equipment/AMC1301/Settings/AMC13 addr tab2 /home/daq/DAQ/amc13/map/AMC13_AddressTable_K7.xml
+amc13_ODB_init(259): /Equipment/AMC1301/Settings/AMC13 enableSoftwareTrigger 0
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider01 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider01 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider01 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider02 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider02 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider02 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider03 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider03 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider03 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider04 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider04 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider04 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider05 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider05 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider05 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider06 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider06 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider06 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider07 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider07 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider07 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider08 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider08 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider08 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider09 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider09 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider09 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider10 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider10 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider10 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider11 enabled 1
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider11 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider11 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider12 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider12 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider12 pre delay 56
+finished amc13_ODB_init()
+
+AMC13 settings from ODB
+33 13 0 192.168.1.188 192.168.1.189
+/home/daq/DAQ/amc13/map/AMC13_AddressTable_S6.xml
+/home/daq/DAQ/amc13/map/AMC13_AddressTable_K7.xml
+
+
+AMC13 Channels Enabled: 0x1400
+Channels read 1400
+INFO:  AMC13 Rider Setup
+ AMC13 Setup commands issued 
+frontend_init_wfd(257): read xml connection file 
+frontend_init_wfd(261): read xml address table file 
+reading content of status register...
+contents of status register: 0xdeadbeef
+tcpsimulator_ODB_get(279): /Equipment/CaloSimulatorAMC1301/Settings/Globals sync 1
+tcpsimulator_ODB_get(306): /Equipment/CaloSimulatorAMC1301/Settings/Channel01 enabled 1
+tcpsimulator_ODB_get(307): /Equipment/CaloSimulatorAMC1301/Settings/Channel01 port no 4660
+tcpsimulator_ODB_get(308): /Equipment/CaloSimulatorAMC1301/Settings/Channel01 ip addr 192.168.3.32
+tcp_client_init(125): allocate TCP fill buffer, size 13  
+tcp_client_init(136): allocate TCP fill header buffer, size 13  
+tcp_client_init(146): allocate TCP fill trailer buffer, size 13  
+tcp_client_init(183): getsockopt receive buffer size 8388608 
+tcp_client_init(191): obtain socket, return file descriptor 23  
+tcp_client_init(221): socket bind, status 0  
+tcp_client_init(237): socket connect, client ip address 192.168.3.6, port no 51723, status 0  
+SetSocketBlocking(822): blocking , O_NONBLOCK  0x00000001 , 0x00000800
+SetSocketBlocking(829): fd 23, flags before setting 0x00000002
+SetSocketBlocking(836): fd 23, flags after setting 0x00000002
+SetSocketBlocking(839): fcntl status 0, errno 0
+tcp_client_init(246): set blocking socket, client ip address 192.168.3.6, port no 51723, status 0
+frontend_init(451): TCP initialization done 
+tcp_thread(340): TCP thread created 
+tcp_thread(348): expected header size 4096
+tcp_thread(356): expected trailer size 8
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 0, buffer 0 
+tcp_thread(400): fill 0 
+ ReadXBytes :: x = 424
+gpu_thread_1(167): GPU1 thread created 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 0, buffer 0, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 0, fill 0
+frontend_init(461): GPU initialization done 
+frontend_init(481): RPC initialization done 
+ AMC13 begin of run functions, status = 1 
+begin_of_run_wfd
+Setting buffer size on five channels:
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+Setting channel number on five channels:
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+Setting post trigger count on five channels:
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+tcp_client_bor(302): begin-of-run TCP fill number 0
+gpu_bor(131): begin-of-run GPU fill number 0
+
+ Successfully connected to [MasterSLAC]
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100000190500008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100000190500008
+tcp_thread(439): reading CDF general header word, Event Index 1
+tcp_thread(444): duration of read header, fdt = 3.110606e+07 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002DD3E30
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002DD3E30
+tcp_thread(500): reading AMC general header word 0x303EDD0250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x0000000000000000, *tmp 0x01000B003000000D, *header+offset+1 0x0000000000000000, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x0000000000000000, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000120b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.400000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035C2100000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035C2100000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 0, fill 0 
+tcp_thread(668): lock ring buffer[0] AVAIL buffer, fill 0
+tcp_thread(673): fill ring buffer[0] AVAIL buffer, fill 0
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[0] AVAIL buffer, fill 0
+tcp_thread(689): duration of memcpy, fdt = 3.900000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 1.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 1, buffer 1 
+tcp_thread(400): fill 1 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[0]+0)=16777297, *(tcp_buf_header_gl[0]+1)=134238352, *(tcp_buf_header_gl[0]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 0
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000001, readout fill number 1, GPU fill number 0
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0000120b, readout fill number 1, GPU fill number 0
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 1, GPU fill number 0
+gpu_thread_1(266): duration from master, fdt = -3.110614e+07 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 0, fill 0
+gpu_thread_1(297): duration of process data, fdt = 5.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 4.021000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 1, buffer 1, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 1, fill 1
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x01000051, readout electronics fill number 134238352
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0000120b, readout electronics fill number 134238352
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134238352
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 44 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 4201 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100000250700008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100000250700008
+tcp_thread(439): reading CDF general header word, Event Index 2
+tcp_thread(444): duration of read header, fdt = 2.290720e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002DDDEF0
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002DDDEF0
+tcp_thread(500): reading AMC general header word 0xF0DEDD0250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x051900007A1F6BA1, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x051900007A1F6BA1, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000120b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 3.500000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035C5E90000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035C5E90000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 1, fill 1 
+tcp_thread(668): lock ring buffer[1] AVAIL buffer, fill 1
+tcp_thread(673): fill ring buffer[1] AVAIL buffer, fill 1
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[1] AVAIL buffer, fill 1
+tcp_thread(689): duration of memcpy, fdt = 2.800000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 2.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 2, buffer 2 
+tcp_thread(400): fill 2 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[1]+0)=33554513, *(tcp_buf_header_gl[1]+1)=134246480, *(tcp_buf_header_gl[1]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 1
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000002, readout fill number 2, GPU fill number 1
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0010120b, readout fill number 2, GPU fill number 1
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 2, GPU fill number 1
+gpu_thread_1(266): duration from master, fdt = -2.251000e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 1, fill 1
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 6.970000e+02 us 
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x02000051, readout electronics fill number 134246480
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 2, buffer 2, size 39813120 
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0010120b, readout electronics fill number 134246480
+gpu_thread_1(200): locking ring buffer READY, buffer 2, fill 2
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134246480
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 35 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 859 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x52000003DA300008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x52000003DA300008
+tcp_thread(439): reading CDF general header word, Event Index 3
+tcp_thread(444): duration of read header, fdt = 2.697760e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002DE7FB0
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002DE7FB0
+tcp_thread(500): reading AMC general header word 0xB07FDE0250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x0725000019E39E6D, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x0725000019E39E6D, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000120b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 3.600000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA000003515D10000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA000003515D10000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 2, fill 2 
+tcp_thread(668): lock ring buffer[2] AVAIL buffer, fill 2
+tcp_thread(673): fill ring buffer[2] AVAIL buffer, fill 2
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[2] AVAIL buffer, fill 2
+tcp_thread(689): duration of memcpy, fdt = 3.100000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 2.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 3, buffer 3 
+tcp_thread(400): fill 3 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[2]+0)=50331730, *(tcp_buf_header_gl[2]+1)=134230234, *(tcp_buf_header_gl[2]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 2
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x52000003, readout fill number 3, GPU fill number 2
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0020120b, readout fill number 3, GPU fill number 2
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 3, GPU fill number 2
+gpu_thread_1(266): duration from master, fdt = -2.691370e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 2, fill 2
+gpu_thread_1(297): duration of process data, fdt = 1.500000e+01 us 
+gpu_thread_1(308): duration of unlock data, fdt = 6.160000e+02 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 3, buffer 3, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 3, fill 3
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x03000052, readout electronics fill number 134230234
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0020120b, readout electronics fill number 134230234
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134230234
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 36 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 831 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100000446500008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100000446500008
+tcp_thread(439): reading CDF general header word, Event Index 4
+tcp_thread(444): duration of read header, fdt = 1.888180e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002DF20B0
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002DF20B0
+tcp_thread(500): reading AMC general header word 0xB020DF0250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0xA33D0000B0B97FD9, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0xA33D0000B0B97FD9, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000120b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.800000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035C3F70000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035C3F70000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 3, fill 3 
+tcp_thread(668): lock ring buffer[3] AVAIL buffer, fill 3
+tcp_thread(673): fill ring buffer[3] AVAIL buffer, fill 3
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[3] AVAIL buffer, fill 3
+tcp_thread(689): duration of memcpy, fdt = 3.500000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 2.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 4, buffer 4 
+tcp_thread(400): fill 4 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[3]+0)=67108945, *(tcp_buf_header_gl[3]+1)=134238278, *(tcp_buf_header_gl[3]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 3
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000004, readout fill number 4, GPU fill number 3
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0030120b, readout fill number 4, GPU fill number 3
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 4, GPU fill number 3
+gpu_thread_1(266): duration from master, fdt = -1.882200e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 3, fill 3
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 3.091000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 4, buffer 4, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 4, fill 4
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x04000051, readout electronics fill number 134238278
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0030120b, readout electronics fill number 134238278
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134238278
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 48 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 3265 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100000575D00008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100000575D00008
+tcp_thread(439): reading CDF general header word, Event Index 5
+tcp_thread(444): duration of read header, fdt = 2.291750e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002DFC170
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002DFC170
+tcp_thread(500): reading AMC general header word 0x70C1DF0250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x654400007966E9A7, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x654400007966E9A7, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000120b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 5.400000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA000003583460000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA000003583460000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 4, fill 4 
+tcp_thread(668): lock ring buffer[4] AVAIL buffer, fill 4
+tcp_thread(673): fill ring buffer[4] AVAIL buffer, fill 4
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[4] AVAIL buffer, fill 4
+tcp_thread(689): duration of memcpy, fdt = 4.300000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 4.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 5, buffer 5 
+tcp_thread(400): fill 5 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[4]+0)=83886161, *(tcp_buf_header_gl[4]+1)=134271093, *(tcp_buf_header_gl[4]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 4
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000005, readout fill number 5, GPU fill number 4
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0040120b, readout fill number 5, GPU fill number 4
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 5, GPU fill number 4
+gpu_thread_1(266): duration from master, fdt = -2.261850e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 4, fill 4
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 3.000000e+00 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 5, buffer 5, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 5, fill 5
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x05000051, readout electronics fill number 134271093
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0040120b, readout electronics fill number 134271093
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134271093
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 54 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 202 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x510000067D400008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x510000067D400008
+tcp_thread(439): reading CDF general header word, Event Index 6
+tcp_thread(444): duration of read header, fdt = 2.290900e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E06240
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E06240
+tcp_thread(500): reading AMC general header word 0x4062E00250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x5D570000E0CB8143, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x5D570000E0CB8143, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000120b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 5.200000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035C37B0000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035C37B0000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 5, fill 5 
+tcp_thread(668): lock ring buffer[5] AVAIL buffer, fill 5
+tcp_thread(673): fill ring buffer[5] AVAIL buffer, fill 5
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[5] AVAIL buffer, fill 5
+tcp_thread(689): duration of memcpy, fdt = 4.500000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 5.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 6, buffer 6 
+tcp_thread(400): fill 6 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[5]+0)=100663377, *(tcp_buf_header_gl[5]+1)=134234237, *(tcp_buf_header_gl[5]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 5
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000006, readout fill number 6, GPU fill number 5
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0050120b, readout fill number 6, GPU fill number 5
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 6, GPU fill number 5
+gpu_thread_1(266): duration from master, fdt = -2.291820e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 5, fill 5
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 6.429000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 6, buffer 6, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 6, fill 6
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x06000051, readout electronics fill number 134234237
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0050120b, readout electronics fill number 134234237
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134234237
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 52 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 6638 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100000746A00008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100000746A00008
+tcp_thread(439): reading CDF general header word, Event Index 7
+tcp_thread(444): duration of read header, fdt = 2.292460e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E10320
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E10320
+tcp_thread(500): reading AMC general header word 0x2003E10250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0xD4670000EAA7D5A4, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0xD4670000EAA7D5A4, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000120b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.400000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA000003511650000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA000003511650000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 6, fill 6 
+tcp_thread(668): lock ring buffer[6] AVAIL buffer, fill 6
+tcp_thread(673): fill ring buffer[6] AVAIL buffer, fill 6
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[6] AVAIL buffer, fill 6
+tcp_thread(689): duration of memcpy, fdt = 4.300000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 5.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 7, buffer 7 
+tcp_thread(400): fill 7 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[6]+0)=117440593, *(tcp_buf_header_gl[6]+1)=134258758, *(tcp_buf_header_gl[6]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 6
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000007, readout fill number 7, GPU fill number 6
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0060120b, readout fill number 7, GPU fill number 6
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 7, GPU fill number 6
+gpu_thread_1(266): duration from master, fdt = -2.228890e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 6, fill 6
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 1.426000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 7, buffer 7, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 7, fill 7
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x07000051, readout electronics fill number 134258758
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0060120b, readout electronics fill number 134258758
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134258758
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 44 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 1603 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100000835700008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100000835700008
+tcp_thread(439): reading CDF general header word, Event Index 8
+tcp_thread(444): duration of read header, fdt = 2.291010e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E1A3F0
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E1A3F0
+tcp_thread(500): reading AMC general header word 0xF0A3E10250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x6A740000882AE6F5, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x6A740000882AE6F5, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000120b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 2.600000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA000003542510000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA000003542510000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 7, fill 7 
+tcp_thread(668): lock ring buffer[7] AVAIL buffer, fill 7
+tcp_thread(673): fill ring buffer[7] AVAIL buffer, fill 7
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[7] AVAIL buffer, fill 7
+tcp_thread(689): duration of memcpy, fdt = 2.500000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 2.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 8, buffer 8 
+tcp_thread(400): fill 8 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[7]+0)=134217809, *(tcp_buf_header_gl[7]+1)=134246453, *(tcp_buf_header_gl[7]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 7
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000008, readout fill number 8, GPU fill number 7
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0070120b, readout fill number 8, GPU fill number 7
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 8, GPU fill number 7
+gpu_thread_1(266): duration from master, fdt = -2.277160e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 7, fill 7
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 7.931000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 8, buffer 8, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 8, fill 8
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x08000051, readout electronics fill number 134246453
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0070120b, readout electronics fill number 134246453
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134246453
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 26 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 8114 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100000992A00008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100000992A00008
+tcp_thread(439): reading CDF general header word, Event Index 9
+tcp_thread(444): duration of read header, fdt = 2.293650e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E244C0
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E244C0
+tcp_thread(500): reading AMC general header word 0xC044E20250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x5783000044A87EB6, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x5783000044A87EB6, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000120b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.300000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA00000356E0F0000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA00000356E0F0000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 8, fill 8 
+tcp_thread(668): lock ring buffer[8] AVAIL buffer, fill 8
+tcp_thread(673): fill ring buffer[8] AVAIL buffer, fill 8
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[8] AVAIL buffer, fill 8
+tcp_thread(689): duration of memcpy, fdt = 4.500000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 4.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 9, buffer 9 
+tcp_thread(400): fill 9 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[8]+0)=150995025, *(tcp_buf_header_gl[8]+1)=134258834, *(tcp_buf_header_gl[8]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 8
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000009, readout fill number 9, GPU fill number 8
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0080120b, readout fill number 9, GPU fill number 8
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 9, GPU fill number 8
+gpu_thread_1(266): duration from master, fdt = -2.215450e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 8, fill 8
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 3.164000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 9, buffer 9, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 9, fill 9
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x09000051, readout electronics fill number 134258834
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0080120b, readout electronics fill number 134258834
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134258834
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 43 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 3408 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100000A0C500008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100000A0C500008
+tcp_thread(439): reading CDF general header word, Event Index 10
+tcp_thread(444): duration of read header, fdt = 2.291640e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E2E5A0
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E2E5A0
+tcp_thread(500): reading AMC general header word 0xA0E5E20250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x2A9900006277E5EE, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x2A9900006277E5EE, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000120b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.400000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035E13E0000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035E13E0000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 9, fill 9 
+tcp_thread(668): lock ring buffer[9] AVAIL buffer, fill 9
+tcp_thread(673): fill ring buffer[9] AVAIL buffer, fill 9
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[9] AVAIL buffer, fill 9
+tcp_thread(689): duration of memcpy, fdt = 4.400000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 4.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 10, buffer 10 
+tcp_thread(400): fill 10 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[9]+0)=167772241, *(tcp_buf_header_gl[9]+1)=134238220, *(tcp_buf_header_gl[9]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 9
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x5100000a, readout fill number 10, GPU fill number 9
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0090120b, readout fill number 10, GPU fill number 9
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 10, GPU fill number 9
+gpu_thread_1(266): duration from master, fdt = -2.260610e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 9, fill 9
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+Begin read_trigger_event!
+gpu_thread_1(308): duration of unlock data, fdt = 9.702000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 10, buffer 10, size 39813120 
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x0a000051, readout electronics fill number 134238220
+gpu_thread_1(200): locking ring buffer READY, buffer 10, fill 10
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0090120b, readout electronics fill number 134238220
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134238220
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 44 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 9923 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100000B91800008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100000B91800008
+tcp_thread(439): reading CDF general header word, Event Index 11
+tcp_thread(444): duration of read header, fdt = 2.292180e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E38670
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E38670
+tcp_thread(500): reading AMC general header word 0x7086E30250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0xC5A00000AC1CBC87, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0xC5A00000AC1CBC87, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000120b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.400000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035D7750000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035D7750000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 10, fill 10 
+tcp_thread(668): lock ring buffer[10] AVAIL buffer, fill 10
+tcp_thread(673): fill ring buffer[10] AVAIL buffer, fill 10
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[10] AVAIL buffer, fill 10
+tcp_thread(689): duration of memcpy, fdt = 4.400000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 4.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 11, buffer 11 
+tcp_thread(400): fill 11 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[10]+0)=184549457, *(tcp_buf_header_gl[10]+1)=134250641, *(tcp_buf_header_gl[10]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 10
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x5100000b, readout fill number 11, GPU fill number 10
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x00a0120b, readout fill number 11, GPU fill number 10
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 11, GPU fill number 10
+gpu_thread_1(266): duration from master, fdt = -2.195930e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 10, fill 10
+gpu_thread_1(297): duration of process data, fdt = 7.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 4.797000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 11, buffer 11, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 11, fill 11
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x0b000051, readout electronics fill number 134250641
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x00a0120b, readout electronics fill number 134250641
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134250641
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 44 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 5051 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100000CD0A00008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100000CD0A00008
+tcp_thread(439): reading CDF general header word, Event Index 12
+tcp_thread(444): duration of read header, fdt = 2.290290e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E42730
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E42730
+tcp_thread(500): reading AMC general header word 0x3027E40250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x18B90000B99D2172, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x18B90000B99D2172, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000120b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 2.600000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035CEF40000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035CEF40000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 11, fill 11 
+tcp_thread(668): lock ring buffer[11] AVAIL buffer, fill 11
+tcp_thread(673): fill ring buffer[11] AVAIL buffer, fill 11
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[11] AVAIL buffer, fill 11
+tcp_thread(689): duration of memcpy, fdt = 2.900000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 2.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 12, buffer 12 
+tcp_thread(400): fill 12 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[11]+0)=201326673, *(tcp_buf_header_gl[11]+1)=134258896, *(tcp_buf_header_gl[11]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 11
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x5100000c, readout fill number 12, GPU fill number 11
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x00b0120b, readout fill number 12, GPU fill number 11
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 12, GPU fill number 11
+gpu_thread_1(266): duration from master, fdt = -2.242620e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 11, fill 11
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 3.000000e+00 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 12, buffer 12, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 12, fill 12
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x0c000051, readout electronics fill number 134258896
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x00b0120b, readout electronics fill number 134258896
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134258896
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 26 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 231 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100000D8F200008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100000D8F200008
+tcp_thread(439): reading CDF general header word, Event Index 13
+tcp_thread(444): duration of read header, fdt = 2.292950e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E4C810
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E4C810
+tcp_thread(500): reading AMC general header word 0x10C8E40250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x0ACD000045BFE392, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x0ACD000045BFE392, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000120b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.700000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035C9B20000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035C9B20000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 12, fill 12 
+tcp_thread(668): lock ring buffer[12] AVAIL buffer, fill 12
+tcp_thread(673): fill ring buffer[12] AVAIL buffer, fill 12
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[12] AVAIL buffer, fill 12
+tcp_thread(689): duration of memcpy, fdt = 4.400000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 4.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 13, buffer 0 
+tcp_thread(400): fill 13 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[12]+0)=218103889, *(tcp_buf_header_gl[12]+1)=134226063, *(tcp_buf_header_gl[12]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 12
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x5100000d, readout fill number 13, GPU fill number 12
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x00c0120b, readout fill number 13, GPU fill number 12
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 13, GPU fill number 12
+gpu_thread_1(266): duration from master, fdt = -2.293500e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 12, fill 12
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 6.589000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 13, buffer 0, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 0, fill 13
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x0d000051, readout electronics fill number 134226063
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x00c0120b, readout electronics fill number 134226063
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134226063
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 47 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 6792 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100000E68D00008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100000E68D00008
+tcp_thread(439): reading CDF general header word, Event Index 14
+tcp_thread(444): duration of read header, fdt = 2.291700e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E568E0
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E568E0
+tcp_thread(500): reading AMC general header word 0xE068E50250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0xF2D800008AE52480, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0xF2D800008AE52480, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000120b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.500000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA000003550E10000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA000003550E10000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 0, fill 13 
+tcp_thread(668): lock ring buffer[0] AVAIL buffer, fill 13
+tcp_thread(673): fill ring buffer[0] AVAIL buffer, fill 13
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[0] AVAIL buffer, fill 13
+tcp_thread(689): duration of memcpy, fdt = 3.700000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 5.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 14, buffer 1 
+tcp_thread(400): fill 14 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[0]+0)=234881105, *(tcp_buf_header_gl[0]+1)=134271080, *(tcp_buf_header_gl[0]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 13
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x5100000e, readout fill number 14, GPU fill number 13
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x00d0120b, readout fill number 14, GPU fill number 13
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 14, GPU fill number 13
+gpu_thread_1(266): duration from master, fdt = -2.226630e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 0, fill 13
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 2.924000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 14, buffer 1, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 1, fill 14
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x0e000051, readout electronics fill number 134271080
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x00d0120b, readout electronics fill number 134271080
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134271080
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 45 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 3148 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100000F6AD00008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100000F6AD00008
+tcp_thread(439): reading CDF general header word, Event Index 15
+tcp_thread(444): duration of read header, fdt = 2.291390e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E609B0
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E609B0
+tcp_thread(500): reading AMC general header word 0xB009E60250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x8DE6000035CAE00F, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x8DE6000035CAE00F, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000120b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.500000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA00000357E780000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA00000357E780000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 1, fill 14 
+tcp_thread(668): lock ring buffer[1] AVAIL buffer, fill 14
+tcp_thread(673): fill ring buffer[1] AVAIL buffer, fill 14
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[1] AVAIL buffer, fill 14
+tcp_thread(689): duration of memcpy, fdt = 3.700000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 5.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 15, buffer 2 
+tcp_thread(400): fill 15 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[1]+0)=251658321, *(tcp_buf_header_gl[1]+1)=134271082, *(tcp_buf_header_gl[1]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 14
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x5100000f, readout fill number 15, GPU fill number 14
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x00e0120b, readout fill number 15, GPU fill number 14
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 15, GPU fill number 14
+gpu_thread_1(266): duration from master, fdt = -2.262570e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 1, fill 14
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 9.423000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 15, buffer 2, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 2, fill 15
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x0f000051, readout electronics fill number 134271082
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x00e0120b, readout electronics fill number 134271082
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134271082
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 45 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 9627 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x510000106D200008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x510000106D200008
+tcp_thread(439): reading CDF general header word, Event Index 16
+tcp_thread(444): duration of read header, fdt = 2.291690e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E6AA80
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E6AA80
+tcp_thread(500): reading AMC general header word 0x80AAE60250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0xADF600003131816F, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0xADF600003131816F, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000120b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 5.400000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA00000353BA30000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA00000353BA30000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 2, fill 15 
+tcp_thread(668): lock ring buffer[2] AVAIL buffer, fill 15
+tcp_thread(673): fill ring buffer[2] AVAIL buffer, fill 15
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[2] AVAIL buffer, fill 15
+tcp_thread(689): duration of memcpy, fdt = 3.700000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 4.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 16, buffer 3 
+tcp_thread(400): fill 16 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[2]+0)=268435537, *(tcp_buf_header_gl[2]+1)=134226029, *(tcp_buf_header_gl[2]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 15
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000010, readout fill number 16, GPU fill number 15
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x00f0120b, readout fill number 16, GPU fill number 15
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 16, GPU fill number 15
+gpu_thread_1(266): duration from master, fdt = -2.198200e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 2, fill 15
+gpu_thread_1(297): duration of process data, fdt = 1.000000e+01 us 
+Begin read_trigger_event!
+gpu_thread_1(308): duration of unlock data, fdt = 4.541000e+03 us 
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x10000051, readout electronics fill number 134226029
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 16, buffer 3, size 39813120 
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x00f0120b, readout electronics fill number 134226029
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134226029
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 54 us
+gpu_thread_1(200): locking ring buffer READY, buffer 3, fill 16
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 4724 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x51000011D5900008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x51000011D5900008
+tcp_thread(439): reading CDF general header word, Event Index 17
+tcp_thread(444): duration of read header, fdt = 2.292010e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E74B50
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E74B50
+tcp_thread(500): reading AMC general header word 0x504BE70250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0xD2060100FDECB956, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0xD2060100FDECB956, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000130b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.600000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA000003561B90000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA000003561B90000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 3, fill 16 
+tcp_thread(668): lock ring buffer[3] AVAIL buffer, fill 16
+tcp_thread(673): fill ring buffer[3] AVAIL buffer, fill 16
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[3] AVAIL buffer, fill 16
+tcp_thread(689): duration of memcpy, fdt = 3.800000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 4.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 17, buffer 4 
+tcp_thread(400): fill 17 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[3]+0)=285212753, *(tcp_buf_header_gl[3]+1)=134254805, *(tcp_buf_header_gl[3]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 16
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000011, readout fill number 17, GPU fill number 16
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0000130b, readout fill number 17, GPU fill number 16
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 17, GPU fill number 16
+gpu_thread_1(266): duration from master, fdt = -2.247250e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 3, fill 16
+gpu_thread_1(297): duration of process data, fdt = 1.000000e+01 us 
+gpu_thread_1(308): duration of unlock data, fdt = 3.000000e+00 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 17, buffer 4, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 4, fill 17
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x11000051, readout electronics fill number 134254805
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0000130b, readout electronics fill number 134254805
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134254805
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 46 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 200 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100001268D00008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100001268D00008
+tcp_thread(439): reading CDF general header word, Event Index 18
+tcp_thread(444): duration of read header, fdt = 2.292480e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E7EC30
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E7EC30
+tcp_thread(500): reading AMC general header word 0x30ECE70250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x591D01006A2FC56B, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x591D01006A2FC56B, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000130b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.400000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA00000355B760000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA00000355B760000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 4, fill 17 
+tcp_thread(668): lock ring buffer[4] AVAIL buffer, fill 17
+tcp_thread(673): fill ring buffer[4] AVAIL buffer, fill 17
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[4] AVAIL buffer, fill 17
+tcp_thread(689): duration of memcpy, fdt = 3.800000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 4.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 18, buffer 5 
+tcp_thread(400): fill 18 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[4]+0)=301989969, *(tcp_buf_header_gl[4]+1)=134271080, *(tcp_buf_header_gl[4]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 17
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000012, readout fill number 18, GPU fill number 17
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0010130b, readout fill number 18, GPU fill number 17
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 18, GPU fill number 17
+gpu_thread_1(266): duration from master, fdt = -2.293290e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 4, fill 17
+gpu_thread_1(297): duration of process data, fdt = 7.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 6.972000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 18, buffer 5, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 5, fill 18
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x12000051, readout electronics fill number 134271080
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0010130b, readout electronics fill number 134271080
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134271080
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 44 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 7204 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x510000133A800008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x510000133A800008
+tcp_thread(439): reading CDF general header word, Event Index 19
+tcp_thread(444): duration of read header, fdt = 2.290640e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E88D00
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E88D00
+tcp_thread(500): reading AMC general header word 0x008DE80250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x8D260100AFC61D0F, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x8D260100AFC61D0F, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000130b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 2.500000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035F29A0000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035F29A0000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 5, fill 18 
+tcp_thread(668): lock ring buffer[5] AVAIL buffer, fill 18
+tcp_thread(673): fill ring buffer[5] AVAIL buffer, fill 18
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[5] AVAIL buffer, fill 18
+tcp_thread(689): duration of memcpy, fdt = 2.100000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 2.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 19, buffer 6 
+tcp_thread(400): fill 19 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[5]+0)=318767185, *(tcp_buf_header_gl[5]+1)=134250554, *(tcp_buf_header_gl[5]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 18
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000013, readout fill number 19, GPU fill number 18
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0020130b, readout fill number 19, GPU fill number 18
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 19, GPU fill number 18
+gpu_thread_1(266): duration from master, fdt = -2.220930e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 5, fill 18
+gpu_thread_1(297): duration of process data, fdt = 7.000000e+00 us 
+Begin read_trigger_event!
+gpu_thread_1(308): duration of unlock data, fdt = 3.063000e+03 us 
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x13000051, readout electronics fill number 134250554
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 19, buffer 6, size 39813120 
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0020130b, readout electronics fill number 134250554
+gpu_thread_1(200): locking ring buffer READY, buffer 6, fill 19
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134250554
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 25 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 3229 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100001468000008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100001468000008
+tcp_thread(439): reading CDF general header word, Event Index 20
+tcp_thread(444): duration of read header, fdt = 2.293460e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E92DE0
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E92DE0
+tcp_thread(500): reading AMC general header word 0xE02DE90250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0xA833010084631D44, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0xA833010084631D44, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000130b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 5.400000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035C05C0000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035C05C0000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 6, fill 19 
+tcp_thread(668): lock ring buffer[6] AVAIL buffer, fill 19
+tcp_thread(673): fill ring buffer[6] AVAIL buffer, fill 19
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[6] AVAIL buffer, fill 19
+tcp_thread(689): duration of memcpy, fdt = 3.800000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 5.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 20, buffer 7 
+tcp_thread(400): fill 20 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[6]+0)=335544401, *(tcp_buf_header_gl[6]+1)=134217832, *(tcp_buf_header_gl[6]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 19
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000014, readout fill number 20, GPU fill number 19
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0030130b, readout fill number 20, GPU fill number 19
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 20, GPU fill number 19
+gpu_thread_1(266): duration from master, fdt = -2.263660e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 6, fill 19
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 9.638000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 20, buffer 7, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 7, fill 20
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x14000051, readout electronics fill number 134217832
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0030130b, readout electronics fill number 134217832
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134217832
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 54 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 9873 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100001509600008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100001509600008
+tcp_thread(439): reading CDF general header word, Event Index 21
+tcp_thread(444): duration of read header, fdt = 2.291420e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E9CEB0
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002E9CEB0
+tcp_thread(500): reading AMC general header word 0xB0CEE90250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x80460100FE047ED3, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x80460100FE047ED3, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000130b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.700000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035674E0000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035674E0000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 7, fill 20 
+tcp_thread(668): lock ring buffer[7] AVAIL buffer, fill 20
+tcp_thread(673): fill ring buffer[7] AVAIL buffer, fill 20
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[7] AVAIL buffer, fill 20
+tcp_thread(689): duration of memcpy, fdt = 3.900000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 4.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 21, buffer 8 
+tcp_thread(400): fill 21 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[7]+0)=352321617, *(tcp_buf_header_gl[7]+1)=134242313, *(tcp_buf_header_gl[7]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 20
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000015, readout fill number 21, GPU fill number 20
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0040130b, readout fill number 21, GPU fill number 20
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 21, GPU fill number 20
+gpu_thread_1(266): duration from master, fdt = -2.195470e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 7, fill 20
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+Begin read_trigger_event!
+gpu_thread_1(308): duration of unlock data, fdt = 5.593000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 21, buffer 8, size 39813120 
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x15000051, readout electronics fill number 134242313
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0040130b, readout electronics fill number 134242313
+gpu_thread_1(200): locking ring buffer READY, buffer 8, fill 21
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134242313
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 47 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 5776 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x51000016C6A00008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x51000016C6A00008
+tcp_thread(439): reading CDF general header word, Event Index 22
+tcp_thread(444): duration of read header, fdt = 2.291170e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002EA6F70
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002EA6F70
+tcp_thread(500): reading AMC general header word 0x706FEA0250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x96500100F5E8C4C1, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x96500100F5E8C4C1, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000130b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.800000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035493A0000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035493A0000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 8, fill 21 
+tcp_thread(668): lock ring buffer[8] AVAIL buffer, fill 21
+tcp_thread(673): fill ring buffer[8] AVAIL buffer, fill 21
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[8] AVAIL buffer, fill 21
+tcp_thread(689): duration of memcpy, fdt = 3.300000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 2.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 22, buffer 9 
+tcp_thread(400): fill 22 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[8]+0)=369098833, *(tcp_buf_header_gl[8]+1)=134258886, *(tcp_buf_header_gl[8]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 21
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000016, readout fill number 22, GPU fill number 21
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0050130b, readout fill number 22, GPU fill number 21
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 22, GPU fill number 21
+gpu_thread_1(266): duration from master, fdt = -2.235670e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 8, fill 21
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 1.402000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 22, buffer 9, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 9, fill 22
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x16000051, readout electronics fill number 134258886
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0050130b, readout electronics fill number 134258886
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134258886
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 48 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 1576 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100001798500008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100001798500008
+tcp_thread(439): reading CDF general header word, Event Index 23
+tcp_thread(444): duration of read header, fdt = 2.291370e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002EB1040
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002EB1040
+tcp_thread(500): reading AMC general header word 0x4010EB0250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x6A6C01006B85534B, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x6A6C01006B85534B, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000130b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 2.800000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA000003556160000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA000003556160000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 9, fill 22 
+tcp_thread(668): lock ring buffer[9] AVAIL buffer, fill 22
+tcp_thread(673): fill ring buffer[9] AVAIL buffer, fill 22
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[9] AVAIL buffer, fill 22
+tcp_thread(689): duration of memcpy, fdt = 2.100000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 2.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 23, buffer 10 
+tcp_thread(400): fill 23 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[9]+0)=385876049, *(tcp_buf_header_gl[9]+1)=134238360, *(tcp_buf_header_gl[9]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 22
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000017, readout fill number 23, GPU fill number 22
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0060130b, readout fill number 23, GPU fill number 22
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 23, GPU fill number 22
+gpu_thread_1(266): duration from master, fdt = -2.277700e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 9, fill 22
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 8.857000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 23, buffer 10, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 10, fill 23
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x17000051, readout electronics fill number 134238360
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0060130b, readout electronics fill number 134238360
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134238360
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 28 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 9029 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100001819500008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100001819500008
+tcp_thread(439): reading CDF general header word, Event Index 24
+tcp_thread(444): duration of read header, fdt = 2.293020e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002EBB120
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002EBB120
+tcp_thread(500): reading AMC general header word 0x20B1EB0250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x8579010093649863, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x8579010093649863, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000130b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.600000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA00000352C760000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA00000352C760000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 10, fill 23 
+tcp_thread(668): lock ring buffer[10] AVAIL buffer, fill 23
+tcp_thread(673): fill ring buffer[10] AVAIL buffer, fill 23
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[10] AVAIL buffer, fill 23
+tcp_thread(689): duration of memcpy, fdt = 3.800000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 4.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 24, buffer 11 
+tcp_thread(400): fill 24 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[10]+0)=402653265, *(tcp_buf_header_gl[10]+1)=134238233, *(tcp_buf_header_gl[10]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 23
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000018, readout fill number 24, GPU fill number 23
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0070130b, readout fill number 24, GPU fill number 23
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 24, GPU fill number 23
+gpu_thread_1(266): duration from master, fdt = -2.205270e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 10, fill 23
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 4.726000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 24, buffer 11, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 11, fill 24
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x18000051, readout electronics fill number 134238233
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0070130b, readout electronics fill number 134238233
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134238233
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 46 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 4930 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100001950C00008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100001950C00008
+tcp_thread(439): reading CDF general header word, Event Index 25
+tcp_thread(444): duration of read header, fdt = 2.292140e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002EC51F0
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002EC51F0
+tcp_thread(500): reading AMC general header word 0xF051EC0250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x9581010044DEA071, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x9581010044DEA071, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000130b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.400000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035D8B80000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035D8B80000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 11, fill 24 
+tcp_thread(668): lock ring buffer[11] AVAIL buffer, fill 24
+tcp_thread(673): fill ring buffer[11] AVAIL buffer, fill 24
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[11] AVAIL buffer, fill 24
+tcp_thread(689): duration of memcpy, fdt = 3.800000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 5.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 25, buffer 12 
+tcp_thread(400): fill 25 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[11]+0)=419430481, *(tcp_buf_header_gl[11]+1)=134266960, *(tcp_buf_header_gl[11]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 24
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000019, readout fill number 25, GPU fill number 24
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0080130b, readout fill number 25, GPU fill number 24
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 25, GPU fill number 24
+gpu_thread_1(266): duration from master, fdt = -2.245810e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 11, fill 24
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 2.750000e+02 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 25, buffer 12, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 12, fill 25
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x19000051, readout electronics fill number 134266960
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0080130b, readout electronics fill number 134266960
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134266960
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 44 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 501 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100001A20E00008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100001A20E00008
+tcp_thread(439): reading CDF general header word, Event Index 26
+tcp_thread(444): duration of read header, fdt = 2.290660e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002ECF2C0
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002ECF2C0
+tcp_thread(500): reading AMC general header word 0xC0F2EC0250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x0C95010024446D11, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x0C95010024446D11, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000130b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 2.600000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035F4CC0000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035F4CC0000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 12, fill 25 
+tcp_thread(668): lock ring buffer[12] AVAIL buffer, fill 25
+tcp_thread(673): fill ring buffer[12] AVAIL buffer, fill 25
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[12] AVAIL buffer, fill 25
+tcp_thread(689): duration of memcpy, fdt = 2.100000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 2.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 26, buffer 0 
+tcp_thread(400): fill 26 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[12]+0)=436207697, *(tcp_buf_header_gl[12]+1)=134275104, *(tcp_buf_header_gl[12]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 25
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x5100001a, readout fill number 26, GPU fill number 25
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0090130b, readout fill number 26, GPU fill number 25
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 26, GPU fill number 25
+gpu_thread_1(266): duration from master, fdt = -2.287960e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 12, fill 25
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+Begin read_trigger_event!
+gpu_thread_1(308): duration of unlock data, fdt = 7.348000e+03 us 
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x1a000051, readout electronics fill number 134275104
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0090130b, readout electronics fill number 134275104
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 26, buffer 0, size 39813120 
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134275104
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+gpu_thread_1(200): locking ring buffer READY, buffer 0, fill 26
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 26 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 7504 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100001B5E600008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100001B5E600008
+tcp_thread(439): reading CDF general header word, Event Index 27
+tcp_thread(444): duration of read header, fdt = 2.293060e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002ED9390
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002ED9390
+tcp_thread(500): reading AMC general header word 0x9093ED0250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x0EA20100F24AB831, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x0EA20100F24AB831, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000130b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 5.100000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035F3710000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035F3710000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 0, fill 26 
+tcp_thread(668): lock ring buffer[0] AVAIL buffer, fill 26
+tcp_thread(673): fill ring buffer[0] AVAIL buffer, fill 26
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[0] AVAIL buffer, fill 26
+tcp_thread(689): duration of memcpy, fdt = 3.600000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 3.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 27, buffer 1 
+tcp_thread(400): fill 27 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[0]+0)=452984913, *(tcp_buf_header_gl[0]+1)=134242398, *(tcp_buf_header_gl[0]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 26
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x5100001b, readout fill number 27, GPU fill number 26
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x00a0130b, readout fill number 27, GPU fill number 26
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 27, GPU fill number 26
+gpu_thread_1(266): duration from master, fdt = -2.219900e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 0, fill 26
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 4.427000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 27, buffer 1, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 1, fill 27
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x1b000051, readout electronics fill number 134242398
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x00a0130b, readout electronics fill number 134242398
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134242398
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 51 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 4606 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100001C27100008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100001C27100008
+tcp_thread(439): reading CDF general header word, Event Index 28
+tcp_thread(444): duration of read header, fdt = 2.292380e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002EE3470
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002EE3470
+tcp_thread(500): reading AMC general header word 0x7034EE0250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0xE6B50100855623F0, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0xE6B50100855623F0, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000130b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.500000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA00000351C380000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA00000351C380000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 1, fill 27 
+tcp_thread(668): lock ring buffer[1] AVAIL buffer, fill 27
+tcp_thread(673): fill ring buffer[1] AVAIL buffer, fill 27
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[1] AVAIL buffer, fill 27
+tcp_thread(689): duration of memcpy, fdt = 3.800000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 4.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 28, buffer 2 
+tcp_thread(400): fill 28 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[1]+0)=469762129, *(tcp_buf_header_gl[1]+1)=134221863, *(tcp_buf_header_gl[1]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 27
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x5100001c, readout fill number 28, GPU fill number 27
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x00b0130b, readout fill number 28, GPU fill number 27
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 28, GPU fill number 27
+gpu_thread_1(266): duration from master, fdt = -2.249350e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 1, fill 27
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 2.000000e+00 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 28, buffer 2, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 2, fill 28
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x1c000051, readout electronics fill number 134221863
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x00b0130b, readout electronics fill number 134221863
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134221863
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 45 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 223 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100001D14000008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100001D14000008
+tcp_thread(439): reading CDF general header word, Event Index 29
+tcp_thread(444): duration of read header, fdt = 2.291180e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002EED540
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002EED540
+tcp_thread(500): reading AMC general header word 0x40D5EE0250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x71C20100B0E38253, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x71C20100B0E38253, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000130b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.600000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA000003519A40000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA000003519A40000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 2, fill 28 
+tcp_thread(668): lock ring buffer[2] AVAIL buffer, fill 28
+tcp_thread(673): fill ring buffer[2] AVAIL buffer, fill 28
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[2] AVAIL buffer, fill 28
+tcp_thread(689): duration of memcpy, fdt = 3.800000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 1.000000e+01 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 29, buffer 3 
+tcp_thread(400): fill 29 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[2]+0)=486539345, *(tcp_buf_header_gl[2]+1)=134217748, *(tcp_buf_header_gl[2]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 28
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x5100001d, readout fill number 29, GPU fill number 28
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x00c0130b, readout fill number 29, GPU fill number 28
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 29, GPU fill number 28
+gpu_thread_1(266): duration from master, fdt = -2.291650e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 2, fill 28
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 7.011000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 29, buffer 3, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 3, fill 29
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x1d000051, readout electronics fill number 134217748
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x00c0130b, readout electronics fill number 134217748
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134217748
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 46 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 7205 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100001E3AD00008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100001E3AD00008
+tcp_thread(439): reading CDF general header word, Event Index 30
+tcp_thread(444): duration of read header, fdt = 2.291290e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002EF7610
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002EF7610
+tcp_thread(500): reading AMC general header word 0x1076EF0250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x40D10100DBE6C369, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x40D10100DBE6C369, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000130b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 2.500000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035E3220000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035E3220000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 3, fill 29 
+tcp_thread(668): lock ring buffer[3] AVAIL buffer, fill 29
+tcp_thread(673): fill ring buffer[3] AVAIL buffer, fill 29
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[3] AVAIL buffer, fill 29
+tcp_thread(689): duration of memcpy, fdt = 2.600000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 3.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 30, buffer 4 
+tcp_thread(400): fill 30 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[3]+0)=503316561, *(tcp_buf_header_gl[3]+1)=134271034, *(tcp_buf_header_gl[3]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 29
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x5100001e, readout fill number 30, GPU fill number 29
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x00d0130b, readout fill number 30, GPU fill number 29
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 30, GPU fill number 29
+gpu_thread_1(266): duration from master, fdt = -2.221500e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 3, fill 29
+gpu_thread_1(297): duration of process data, fdt = 9.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 2.538000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 30, buffer 4, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 4, fill 30
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x1e000051, readout electronics fill number 134271034
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x00d0130b, readout electronics fill number 134271034
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134271034
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 25 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 2711 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100001FB5700008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100001FB5700008
+tcp_thread(439): reading CDF general header word, Event Index 31
+tcp_thread(444): duration of read header, fdt = 2.292990e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002F016E0
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002F016E0
+tcp_thread(500): reading AMC general header word 0xE016F00250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0xADE3010036B8D6FD, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0xADE3010036B8D6FD, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000130b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.700000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035D5BC0000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035D5BC0000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 4, fill 30 
+tcp_thread(668): lock ring buffer[4] AVAIL buffer, fill 30
+tcp_thread(673): fill ring buffer[4] AVAIL buffer, fill 30
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[4] AVAIL buffer, fill 30
+tcp_thread(689): duration of memcpy, fdt = 4.400000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 4.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 31, buffer 5 
+tcp_thread(400): fill 31 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[4]+0)=520093777, *(tcp_buf_header_gl[4]+1)=134246581, *(tcp_buf_header_gl[4]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 30
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x5100001f, readout fill number 31, GPU fill number 30
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x00e0130b, readout fill number 31, GPU fill number 30
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 31, GPU fill number 30
+gpu_thread_1(266): duration from master, fdt = -2.268930e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 4, fill 30
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 9.640000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 31, buffer 5, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 5, fill 31
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x1f000051, readout electronics fill number 134246581
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x00e0130b, readout electronics fill number 134246581
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134246581
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 47 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 9887 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100002020100008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100002020100008
+tcp_thread(439): reading CDF general header word, Event Index 32
+tcp_thread(444): duration of read header, fdt = 2.291880e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002F0B7C0
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002F0B7C0
+tcp_thread(500): reading AMC general header word 0xC0B7F00250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x57FB01003BE84E51, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x57FB01003BE84E51, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000130b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.600000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035FA130000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035FA130000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 5, fill 31 
+tcp_thread(668): lock ring buffer[5] AVAIL buffer, fill 31
+tcp_thread(673): fill ring buffer[5] AVAIL buffer, fill 31
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[5] AVAIL buffer, fill 31
+tcp_thread(689): duration of memcpy, fdt = 4.300000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 4.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 32, buffer 6 
+tcp_thread(400): fill 32 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[5]+0)=536870993, *(tcp_buf_header_gl[5]+1)=134221856, *(tcp_buf_header_gl[5]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 31
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000020, readout fill number 32, GPU fill number 31
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x00f0130b, readout fill number 32, GPU fill number 31
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 32, GPU fill number 31
+gpu_thread_1(266): duration from master, fdt = -2.195790e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 5, fill 31
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 5.546000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 32, buffer 6, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 6, fill 32
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x20000051, readout electronics fill number 134221856
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x00f0130b, readout electronics fill number 134221856
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134221856
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 46 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 5748 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x5100002122100008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x5100002122100008
+tcp_thread(439): reading CDF general header word, Event Index 33
+tcp_thread(444): duration of read header, fdt = 2.291150e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002F15890
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002F15890
+tcp_thread(500): reading AMC general header word 0x9058F10250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x01020200EAC53318, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x01020200EAC53318, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000140b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 2.600000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA00000353F130000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA00000353F130000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 6, fill 32 
+tcp_thread(668): lock ring buffer[6] AVAIL buffer, fill 32
+tcp_thread(673): fill ring buffer[6] AVAIL buffer, fill 32
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[6] AVAIL buffer, fill 32
+tcp_thread(689): duration of memcpy, fdt = 2.400000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 3.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 33, buffer 7 
+tcp_thread(400): fill 33 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[6]+0)=553648209, *(tcp_buf_header_gl[6]+1)=134221858, *(tcp_buf_header_gl[6]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 32
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000021, readout fill number 33, GPU fill number 32
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0000140b, readout fill number 33, GPU fill number 32
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 33, GPU fill number 32
+gpu_thread_1(266): duration from master, fdt = -2.235960e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 6, fill 32
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+gpu_thread_1(308): duration of unlock data, fdt = 1.232000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 33, buffer 7, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 7, fill 33
+Begin read_trigger_event!
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x21000051, readout electronics fill number 134221858
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0000140b, readout electronics fill number 134221858
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134221858
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 26 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 1387 us
+read_trigger_event(975): midas bank size: 4632
+ReadXBytes(806): socket file descriptor 23, request 424 bytes, read 424 bytes, tries 1
+tcp_thread(437): read header, header size [bytes] 4096, header[0] 0x510000227D100008, BODdelimiter 0x4000000000000000, BODmask 0xe000000000000000
+getEventIndex(747): CDFGeneralHeaderWord 0x510000227D100008
+tcp_thread(439): reading CDF general header word, Event Index 34
+tcp_thread(444): duration of read header, fdt = 2.293890e+05 us 
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002F1F960
+getAMCNum(777): AMCGeneralHeaderWord 0x1010035002F1F960
+tcp_thread(500): reading AMC general header word 0x60F9F10250031010, nAMC decoded 1
+tcp_thread(518): read AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x21120200D7D8AEEE, *tmp+1 0x0000000000000000, blockcount 0
+tcp_thread(521): copy AMC headers: tmp 0x7f77bfcfbd50, *header+offset 0x01000B003000000D, *tmp 0x01000B003000000D, *header+offset+1 0x21120200D7D8AEEE, *tmp+1 0x0000000000000000, blockcount 0
+decodeAMCHeader(722): index 0, AMCHeaderWord 0x0D000030000B0001
+tcp_thread(545): blockcount 0, iAMC 0, calculated AMC data offset  0x00000000
+tcp_thread(578): blockcount 0, iAMC 0, calculated AMC+Block data offset  0x00000000
+tcp_thread(583): dummyoffset 0x00000033, *dummy 0x0000140b
+tcp_thread(613): done reading AMC block 0
+tcp_thread(620): finished data read data count 0x00000180 blockcount 1
+tcp_thread(624): duration of read, fdt = 4.400000e+01 us 
+tcp_thread(644): read trailer, trailer size [bytes] 8, tail[0] 0xA0000035FB660000, EODdelimiter 0xA000000000000000, EODmask 0xF000000000000000
+getOverallSize(762): CDFGeneralHeaderWord 0xA0000035FB660000
+tcp_thread(646): reading CDF general trailer word, Overall Size 53
+tcp_thread(650): integrity data, BOD:  0x4000000000000000 = 0x4000000000000000  ? EOD:  0xA000000000000000 = 0xA000000000000000  ? 
+tcp_thread(655): PASS data integrity check, buffer 7, fill 33 
+tcp_thread(668): lock ring buffer[7] AVAIL buffer, fill 33
+tcp_thread(673): fill ring buffer[7] AVAIL buffer, fill 33
+tcp_thread(681): copied 4096, 384, 8, header, data, tail bytes
+tcp_thread(685): unlock ring buffer[7] AVAIL buffer, fill 33
+tcp_thread(689): duration of memcpy, fdt = 4.300000e+01 us 
+tcp_thread(693): duration of unlock, fdt = 4.000000e+00 us 
+tcp_thread(393): after while ( 1 ), read TCP packets, fill 34, buffer 8 
+tcp_thread(400): fill 34 
+ ReadXBytes :: x = 424
+gpu_thread_1(203): locked ring buffer READY, *(tcp_buf_header_gl[7]+0)=570425425, *(tcp_buf_header_gl[7]+1)=134221949, *(tcp_buf_header_gl[7]+7)=0x00000000
+gpu_thread_1(221): locking before writing to GPU output buffers, fill 33
+gpu_thread_1(227): copying header databank  [size=0x00001000], header[0] 0x51000022, readout fill number 34, GPU fill number 33
+gpu_thread_1(236): copying raw databank  [size=0x00000180], *data 0x7f772bff1010, data[0] 0x0010140b, readout fill number 34, GPU fill number 33
+gpu_thread_1(244): copying tail databank  [size=0x00000008], tail[0] 0xa0000035, readout fill number 34, GPU fill number 33
+gpu_thread_1(266): duration from master, fdt = -2.282500e+05 us 
+gpu_thread_1(275): unlocking ring buffer AVAIL, buffer 7, fill 33
+gpu_thread_1(297): duration of process data, fdt = 6.000000e+00 us 
+Begin read_trigger_event!
+gpu_thread_1(308): duration of unlock data, fdt = 7.905000e+03 us 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 34, buffer 8, size 39813120 
+read_trigger_event(834): made header databank BC01 size 0x00001000, header[0] 0x22000051, readout electronics fill number 134221949
+read_trigger_event(852): made raw databank RC01 size 0x00000180, *data 0x7f772bff1010, data[0] 0x0010140b, readout electronics fill number 134221949
+read_trigger_event(862): made trailer databank EC01 size 0x00000008, tail[0] 0x350000a0, readout electronics fill number 134221949
+gpu_thread_1(200): locking ring buffer READY, buffer 8, fill 34
+read_trigger_event(972): EOF master-slave propogation time: dt = 0 s 0 us
+read_trigger_event(973): tcp_thread read data duration: dt = 0 s 44 us
+read_trigger_event(974): read_trigger_event send data duration: dt = 0 s 8101 us
+read_trigger_event(975): midas bank size: 4632
+tcp_client_eor(318): end-of-run TCP fill number 34
+gpu_eor(148): end-of-run GPU fill number 34
+Disconnecting from master frontend ....    success
+frontend_loop sets RPC_SHUTDOWN
+tcp_client_exit(282): close client socket, file descriptor 23  

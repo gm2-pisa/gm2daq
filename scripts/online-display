@@ -1,0 +1,7 @@
+#!/bin/bash
+
+$HOME/DAQ/online-display/online-display $*
+
+
+
+

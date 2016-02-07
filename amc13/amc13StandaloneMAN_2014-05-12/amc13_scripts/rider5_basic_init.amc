@@ -1,0 +1,40 @@
+#
+# This AMC13Tool script initializes the AMC13 from all AMC inputs and 
+
+# Reset the AMC13 (not usually necessary, but never a bad idea)
+#rg
+
+# Enable the AMC13 from all twelve of its AMC inputs,
+# data link on
+#en 10 d l t
+
+# Display AMC13 status 
+st
+
+# setup
+# run control, only uses bits 0-14, resets things including event counter (also causes loss of datalink connection)
+# chans 10
+#wv 0x3 0x1400
+
+# run control, 0x187 means 
+# bit 0 '1' run mode, bit 1 '1' enables DAQLSC, bit 2 "1" use LIA
+# bit 5 '1' enable non-standard TTCrx broadcast for front panel triggers
+# bit 7 "1" generate fake event on receiving L1A, bit 8 "1" TTs=TTC 
+# for external trigger
+#wv 0x1 0x25
+
+
+# controls the rate in free running mode using lower 16 bits
+# 0x8000 is period of L1As so decreasing 0x8000 increases rate
+#wv 0x1c 0x0
+# 0x550 makes 32kB events, 13 May 2014 changed to 17 bit payload
+#wv 0x18 0x100
+# bit 5 '1' reset ddr3 memory controller
+#wv 0x0 0x10
+# set ip address of 10GbE data link to 192.168.3.32
+wv 0x1c1c 0xc0a80320
+# enable daq link
+wv 0x1 0x7
+
+#status
+st

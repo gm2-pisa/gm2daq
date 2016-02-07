@@ -1,0 +1,23 @@
+#reset both FPGAs
+rg
+
+#setup to read out from slot 8 with DAQ link
+wv 0x3 0x1080
+
+#enable slot 8 with ttc trigger
+en 8 t
+
+#run control
+wv 0x1 0x107
+
+#set SFP0 IP address to 192.168.3.32
+wv 0x1c1c 0xc0a80320
+
+#necessary to get rider triggers to AMC13
+wv CONF.AMC.TTS_DISABLE_MASK 0xfff
+
+#turn on SFP0
+daq 1
+
+#print status
+st

@@ -1,0 +1,24 @@
+# this script resets the two WFD1 boards and the AMC13
+# -- comment out sections or make another script if you want to reset individual boards
+# -- the WFD1 reset command resets all the firmware on the master FPGA, but not the channel FPGA
+# -- the only way to reset the channel FPGA is to power cycle the crate and re-program the FPGAs
+
+import uhal
+
+hw_man = uhal.ConnectionManager("file://connection.xml")
+uhal.disableLogging()
+wfd1_sn4 = hw_man.getDevice("wfd1_sn4")
+wfd1_sn2 = hw_man.getDevice("wfd1_sn2")
+amc13 = hw_man.getDevice("amc13")
+
+# reset WFD1 S/N 4
+wfd1_sn4.getNode("ctrl.rst").write(1)
+wfd1_sn4.dispatch()
+
+# reset WFD1 S/N 2
+wfd1_sn2.getNode("ctrl.rst").write(1)
+wfd1_sn2.dispatch()
+
+# reset AMC13 (necessary for daq link to be ready after reset of WFD)
+#amc13.getNode("CONTROL0").write(0x1)
+#amc13.dispatch()

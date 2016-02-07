@@ -1,0 +1,14 @@
+#
+# This AMC13Tool script initializes the AMC13 from all AMC inputs and 
+# prepares the module to send local L1As and build fake events
+#
+# Reset the AMC13 (not usually necessary, but never a bad idea)
+rg
+rc
+# Enable the AMC13 from all twelve of its AMC inputs,
+# enable run mode, and prepare to take fake data
+en 0-11 f
+# Display AMC13 status 
+st
+# (exit this script file)
+q

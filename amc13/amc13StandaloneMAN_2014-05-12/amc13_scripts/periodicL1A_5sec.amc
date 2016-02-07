@@ -1,0 +1,18 @@
+#
+# This AMC13Tool script sends periodic, locally-generated L1As
+# at OrN spacing 0x100 for 5 seconds and checks the AMC13 status
+#
+# Execute AMC13Tool script which initializes the AMC13
+do init.amc
+# Set OrN Spacing
+tsp 0x100
+# Enable periodic triggers
+lt e
+# wait for five seconds
+sh sleep 5
+# Disable periodic  triggers
+lt d
+# Check AMC13 status
+st
+# (quit this script file)
+q

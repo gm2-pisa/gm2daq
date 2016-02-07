@@ -1,0 +1,15 @@
+#!/bin/sh
+killall mserver mevb mlogger mhttpd frontend mtransition 
+killall mserver mevb mlogger mhttpd frontend mtransition
+killall -9 mserver mevb mlogger mhttpd frontend mtransition
+killall -9 mserver mevb mlogger mhttpd frontend mtransition
+$MIDASSYS/utils/mcleanup
+$MIDASSYS/utils/mcleanup
+killall screen
+screen -wipe
+$MIDASSYS/utils/mcleanup
+$MIDASSYS/utils/mcleanup
+killall screen
+screen -wipe
+$MIDASSYS/utils/mcleanup
+$MIDASSYS/utils/mcleanup

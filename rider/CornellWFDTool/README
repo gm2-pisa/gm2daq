@@ -1,0 +1,37 @@
+This directory contains software tools for configuring the Cornell WFDs
+
+We use IPbus for communication with the WFDs:
+   svnweb.cern.ch/trac/cactus/wiki
+
+To build all the code:
+   1. edit setenv.sh (if necessary) to point to your cactus IPbus installation
+   2. edit Makefile (if necessary) to point to your cactus IPbus installation
+   3. source setenv.sh
+   4. type "make" in the base directory
+
+The result of the "make" command should be
+   1. "obj" directory containing object (.o) and dependency (.d) files for
+      each C++ file
+   2. "lib" directory containing the shared library (.so) file for the
+      CornellWFDTool classes
+   3. "bin" directory containing executables
+
+So far we have only implemented executables for updating the firmware bitstreams
+stored in the flash memory chip of the WFDs.
+
+The master bitstream is stored at address 0x0 in the flash
+The channel bitstream is stored at address 0xCE0000
+(These addresses are hardcoded in the firmware and in the C++ code)
+
+Usage:
+
+    programMasterFirmware connectionFileName.xml mcsFileName.mcs
+    programChannelFirmware connectionFileName.xml mcsFileName.mcs
+
+For now we are still using Python scripts for other configuration tasks.
+We plan to add more functionality to the C++ CornellWFDTool code in the future.
+
+The "connection" directory contains the WFD address table and an example
+connection file.
+
+Contact Robin Bjorkquist <rb532@cornell.edu> with any questions.

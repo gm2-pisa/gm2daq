@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<connections>
+	<connection id="wfd"   uri="ipbusudp-2.0://192.168.26.33:50001" address_table="file://address_table.xml" />
+</connections>

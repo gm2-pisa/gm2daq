@@ -1,0 +1,30 @@
+#
+# This AMC13Tool script initializes the AMC13 from all AMC inputs and 
+# prepares the module to send local L1As and build fake events
+#
+# Reset the AMC13 (not usually necessary, but never a bad idea)
+rg
+# Enable the AMC13 from all twelve of its AMC inputs,
+# enable run mode, and prepare to take fake data
+en 0-11 f
+# Display AMC13 status 
+st
+# setup
+# run control, only uses bits 0-14
+wv 0x1 0x0
+# enables amc slots and SFP outputs
+wv 0x3 0x1fff
+# run control, 0x187 means 
+# bit 0 '1' run mode, bit 1 '1' enables DAQLSC, bit 2 "1" use LIA
+# bit 7 "1" generate fake event on receiving L1A, bit 8 "1" TTs=TTC 
+wv 0x1 0x187
+# controls the rate in free running mode using lower 16 bits
+# 0x8000 is period of L1As so decreasing 0x8000 increases rate
+wv 0x1c 0x80008000
+# 0x550 makes 32kB events, 13 May 2014 changed to 17 bit payload
+wv 0x18 0x550
+# bit 5 '1' reset ddr3 memory controller
+wv 0x0 0x10
+# set ip address of 10GbE data link to 192.168.3.32
+wv 0x1c1c 0xc0a80320
+

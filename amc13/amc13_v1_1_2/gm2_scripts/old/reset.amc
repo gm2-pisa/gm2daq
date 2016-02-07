@@ -1,0 +1,4 @@
+# reset the AMC13 10GbE link
+ws 0x0 0x10
+q
+

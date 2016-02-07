@@ -1,0 +1,172 @@
+Frontend name          :     AMC1301
+Event buffer size      :     268435456
+User max event size    :     33554432
+# of events per buffer :     8
+
+about to do amc13_ODB_init()
+amc13_ODB_init(178): /Equipment/AMC1301/Settings/Globals sync 0
+amc13_ODB_init(179): /Equipment/AMC1301/Settings/Globals TQ methods 0
+amc13_ODB_init(180): /Equipment/AMC1301/Settings/Globals raw data store 1
+amc13_ODB_init(181): /Equipment/AMC1301/Settings/Globals raw data prescale 1
+amc13_ODB_init(182): /Equipment/AMC1301/Settings/Globals raw data prescale offset 1
+amc13_ODB_init(183): /Equipment/AMC1301/Settings/Globals histogram data store 0
+amc13_ODB_init(184): /Equipment/AMC1301/Settings/Globals histogram data flush  1
+amc13_ODB_init(185): /Equipment/AMC1301/Settings/Globals histogram data flush offset 1
+amc13_ODB_init(215): /Equipment/AMC1301/Settings/Link01 enabled 1
+amc13_ODB_init(216): /Equipment/AMC1301/Settings/Link01 enabled 51727
+amc13_ODB_init(217): /Equipment/AMC1301/Settings/Link01 enabled 192.168.3.6
+amc13_ODB_init(218): /Equipment/AMC1301/Settings/Link01 enabled fe01
+amc13_ODB_init(247): /Equipment/AMC1301/Settings/AMC13 header size 4096
+amc13_ODB_init(248): /Equipment/AMC1301/Settings/AMC13 amc data size 25171760
+amc13_ODB_init(249): /Equipment/AMC1301/Settings/AMC13 tail size 8
+amc13_ODB_init(250): /Equipment/AMC1301/Settings/AMC13 rawmax size 512
+amc13_ODB_init(252): /Equipment/AMC1301/Settings/AMC13 serial no 33
+amc13_ODB_init(253): /Equipment/AMC1301/Settings/AMC13 slot no 13
+amc13_ODB_init(254): /Equipment/AMC1301/Settings/AMC13 using control hub 0
+amc13_ODB_init(255): /Equipment/AMC1301/Settings/AMC13 T2 ip 192.168.1.188
+amc13_ODB_init(256): /Equipment/AMC1301/Settings/AMC13 T1 ip 192.168.1.189
+amc13_ODB_init(257): /Equipment/AMC1301/Settings/AMC13 addr tab1 /home/daq/DAQ/amc13/map/AMC13_AddressTable_S6.xml
+amc13_ODB_init(258): /Equipment/AMC1301/Settings/AMC13 addr tab2 /home/daq/DAQ/amc13/map/AMC13_AddressTable_K7.xml
+amc13_ODB_init(259): /Equipment/AMC1301/Settings/AMC13 enableSoftwareTrigger 0
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider01 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider01 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider01 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider02 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider02 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider02 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider03 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider03 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider03 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider04 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider04 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider04 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider05 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider05 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider05 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider06 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider06 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider06 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider07 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider07 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider07 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider08 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider08 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider08 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider09 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider09 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider09 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider10 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider10 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider10 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider11 enabled 1
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider11 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider11 pre delay 56
+amc13_ODB_init(289): /Equipment/AMC1301/Settings/Rider12 enabled 0
+amc13_ODB_init(290): /Equipment/AMC1301/Settings/Rider12 sample length 256
+amc13_ODB_init(291): /Equipment/AMC1301/Settings/Rider12 pre delay 56
+finished amc13_ODB_init()
+
+AMC13 settings from ODB
+33 13 0 192.168.1.188 192.168.1.189
+/home/daq/DAQ/amc13/map/AMC13_AddressTable_S6.xml
+/home/daq/DAQ/amc13/map/AMC13_AddressTable_K7.xml
+
+
+AMC13 Channels Enabled: 0x1400
+Channels read 1400
+INFO:  AMC13 Rider Setup
+ AMC13 Setup commands issued 
+frontend_init_wfd(257): read xml connection file 
+frontend_init_wfd(261): read xml address table file 
+reading content of status register...
+contents of status register: 0xdeadbeef
+tcpsimulator_ODB_get(279): /Equipment/CaloSimulatorAMC1301/Settings/Globals sync 1
+tcpsimulator_ODB_get(306): /Equipment/CaloSimulatorAMC1301/Settings/Channel01 enabled 1
+tcpsimulator_ODB_get(307): /Equipment/CaloSimulatorAMC1301/Settings/Channel01 port no 4660
+tcpsimulator_ODB_get(308): /Equipment/CaloSimulatorAMC1301/Settings/Channel01 ip addr 192.168.3.32
+tcp_client_init(125): allocate TCP fill buffer, size 13  
+tcp_client_init(136): allocate TCP fill header buffer, size 13  
+tcp_client_init(146): allocate TCP fill trailer buffer, size 13  
+tcp_client_init(183): getsockopt receive buffer size 8388608 
+tcp_client_init(191): obtain socket, return file descriptor 23  
+tcp_client_init(221): socket bind, status 0  
+tcp_client_init(236): socket connect, client ip address 192.168.3.6, port no 51727, status 0  
+SetSocketBlocking(819): blocking , O_NONBLOCK  0x00000001 , 0x00000800
+SetSocketBlocking(826): fd 23, flags before setting 0x00000002
+SetSocketBlocking(833): fd 23, flags after setting 0x00000002
+SetSocketBlocking(836): fcntl status 0, errno 0
+tcp_client_init(245): set blocking socket, client ip address 192.168.3.6, port no 51727, status 0
+frontend_init(451): TCP initialization done 
+tcp_thread(339): TCP thread created 
+tcp_thread(347): expected header size 4096
+tcp_thread(355): expected trailer size 8
+gpu_thread_1(167): GPU1 thread created 
+gpu_thread_1(192): after while ( 1 ), read TCP packets, fill 0, buffer 0, size 39813120 
+gpu_thread_1(200): locking ring buffer READY, buffer 0, fill 0
+tcp_thread(392): after while ( 1 ), read TCP packets, fill 0, buffer 0 
+tcp_thread(399): fill 0 
+frontend_init(461): GPU initialization done 
+frontend_init(480): RPC initialization done 
+ AMC13 begin of run functions, status = 1 
+begin_of_run_wfd
+INFO:  Resetting the AMC13
+Virtex RESET 
+Virtex CTR_RESET
+Virtex CONTROL1
+Setting buffer size on five channels:
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+Setting channel number on five channels:
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+Setting post trigger count on five channels:
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+ Rider_library before writeBlock
+ Rider_library after read
+Response code: 3
+tcp_client_bor(301): begin-of-run TCP fill number 0
+gpu_bor(131): begin-of-run GPU fill number 0
+
+ Successfully connected to [MasterSLAC]
+tcp_client_eor(317): end-of-run TCP fill number 0
+gpu_eor(148): end-of-run GPU fill number 0
+Disconnecting from master frontend ....    success
+frontend_loop sets RPC_SHUTDOWN
+tcp_client_exit(281): close client socket, file descriptor 23  

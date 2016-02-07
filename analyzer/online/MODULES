@@ -1,0 +1,33 @@
+run_number
+master
+amc13
+amc13_hist_raw
+#CaloTime_AMC13
+#amc13_headers
+#amc13_tree
+Qplotter
+#Tplotter
+#RAWplotter
+# Use sis3350_packet for UDP readout
+#sis3350_packet
+# Use sis3350_vme for VME readout
+#CaloReadoutTCPIP_RB
+#CaloReadoutTCPIP_NEW
+#sis3350_vme
+#sis3350_timeMT
+#sis3350_hist_raw
+#sis3350_defna
+#sis3350_defna_hist
+#sis3350_tree
+#sis3350_hist
+#ats9870
+#ats9870_timeMT
+#ats9870_hist_raw
+#CFT
+#emc
+#emc_hist_raw
+#fake_calo
+#calorimeter
+#calorimeter_defna
+#calorimeter_defna_hist
+#sis3350_hist_raw

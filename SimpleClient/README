@@ -1,0 +1,23 @@
+Instructions for SimpleClient (copied from Dan's email)
+
+Now you can start the AMC13Tool and get data flowing.
+run AMC13Tool with the arguments "-u -n XX" where XX is the serial number on the AMC13 card
+
+Here are some basic commands to get the AMC13 card to generate data
+     rg
+     wv 0x1 0x0
+     wv 0x3 0x1fff
+     wv 0x1 0x187
+     wv 0x1c 0x80008000
+     wv 0x0 0x10
+     wv 0x0 0x1
+
+     start the simple client now! (The first SFP should be 192.168.1.32)
+
+     wv 0x0 0x4000000  (starts the data flow)
+     wv 0x0 0x400  (stops the data flow)
+
+This will take data from the AMC13 at about 29MBps.
+
+While it is running, you can step down the value in the lowest 16bits of 0x1c by factors of two to increase the data rate by factors of two.
+So "wv 0x1c 0x80004000" should double the data rate from the AMC13.

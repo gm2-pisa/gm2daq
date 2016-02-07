@@ -1,0 +1,16 @@
+#
+# This shell script assumed by default that your nonRPM build is in your home directory
+# If this is not the case, then you need to change 'buildPath' to the appropriate 
+# location of your CACTUS code
+#
+
+AMC13_STANDALONE_ROOT=${PWD}/
+buildPath=${HOME}
+
+setenv LD_LIBRARY_PATH ${PWD}/lib:$LD_LIBARAY_PATH
+setenv LD_LIBRARY_PATH $buildPath/trunk/extern/boost/RPMBUILD/SOURCES/lib:$LD_LIBRARY_PATH
+setenv LD_LIBRARY_PATH $buildPath/trunk/extern/pugixml/RPMBUILD/SOURCES/lib:$LD_LIBRARY_PATH
+setenv LD_LIBRARY_PATH $buildPath/trunk/uhal/log/RPMBUILD/SOURCES/lib:$LD_LIBRARY_PATH
+setenv LD_LIBRARY_PATH $buildPath/trunk/uhal/grammars/RPMBUILD/SOURCES/lib:$LD_LIBRARY_PATH
+setenv LD_LIBRARY_PATH $buildPath/trunk/uhal/uhal/RPMBUILD/SOURCES/lib:$LD_LIBRARY_PATH
+setenv LD_LIBRARY_PATH $buildPath/trunk/uhal/tests/RPMBUILD/SOURCES/lib:$LD_LIBRARY_PATH

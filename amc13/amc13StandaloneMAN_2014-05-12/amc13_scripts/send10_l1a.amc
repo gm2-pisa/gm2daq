@@ -1,0 +1,13 @@
+#
+# This script sends ten 'single', non-periodic, locally-generated L1As
+# and checks the AMC13 status
+#
+# Execute the AMC13Tool script which initializes the AMC13
+do init.amc
+# Send 10 locally-generated triggers
+lt 10
+# Display AMC13 status
+st
+# (exit this script file)
+q
+

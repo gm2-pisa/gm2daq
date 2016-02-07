@@ -1,0 +1,897 @@
+/**
+ * @file    kernel.cu
+ * @author  Vladimir Tishchenko <tishenko@pa.uky.edu>
+ * @date    Mon Oct 24 16:17:46 2011 (-0400)
+ * @date    Last-Updated: Wed Aug  1 09:06:49 2012 (-0500)
+ *          By : Data Acquisition
+ *          Update #: 355 
+ * @version $Id$
+ * 
+ * @copyright (c) new (g-2) collaboration
+ * 
+ * 
+ * @section Changelog
+ * @verbatim
+ * $Log$
+ * @endverbatim
+ */
+
+
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <linux/types.h>
+
+
+// network
+//#include <linux/if_packet.h>
+//#include <net/ethernet.h>
+//#include <netinet/in.h>
+//#include <linux/if_packet.h>
+//#include <netinet/ip.h>
+//#include <netinet/udp.h>
+
+
+// includes, project
+#include <cuda.h>
+#include <cutil_inline.h>
+
+// includes, kernels
+//#include <kernel_packet.cu>
+
+#include "cuda_tools_g2.h"
+#include "gpu_thread.h"
+
+// number of detectors in calorimeter
+#define N_DETECTORS    35
+// number of samples per waveform
+#define N_SAMPLES      368640
+// ADC type
+#define ADC_TYPE       u_int16_t
+#define ADC_MAX        4096
+#define DECIMATION     32
+
+// structure for auxiliary data
+typedef struct s_gpu_aux_data {
+  
+  double   wf_sum[N_SAMPLES];            // sum waveform 
+  //int      ADC[N_DETECTORS][ADC_MAX];  // the distribution of all ADC samples
+  double   pedestal[N_DETECTORS];        // calculated pedestal average
+  int      island_pattern[N_SAMPLES];    // auxiliary array for island build
+  int      islands_size;                 // total size of the array islands[]
+  struct {
+    int time;
+    int length;
+    int offset;
+  } island_info[N_SAMPLES];
+} GPU_AUX_DATA;
+
+
+// structure for output data
+typedef struct s_gpu_out_data {
+  int island_offset;                // used to record islands
+  int n_islands;                    // number of islands found
+  int islands[1];                   // array of islands
+} GPU_OUT_DATA;
+
+
+
+// energy calibration coefficient
+// in the future this needs to be recorded to ODB
+// detectors may require recalibration from time to  time
+__device__
+static double A_calib[N_DETECTORS] = {
+  1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0,
+  1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0,
+  1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0,
+  1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0,
+  1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0
+};
+
+
+#if 0
+/** 
+ * Makes the distribution of ADC samples (fills ADC arrays
+ * in GPU_AUX_DATA)
+ * Histogramming is a bad task for GPU
+ * Need a better solution
+ * 
+ * @param gpu_idata 
+ * @param gpu_odata 
+ */
+__global__
+void kernel_wf_make_ADC(ADC_TYPE *gpu_idata, ADC_TYPE* gpu_odata)
+{
+
+  // access thread id
+  const unsigned int tid = threadIdx.x;
+  // access number of threads in this block
+  const unsigned int num_threads = blockDim.x;
+  // access block id
+  const unsigned int bid = blockIdx.x;
+
+  // global index
+  //const unsigned int sample_nr = bid*num_threads + tid;
+ 
+  GPU_AUX_DATA *auxdata = (GPU_AUX_DATA*) gpu_odata;
+
+  int sum;
+
+  int idet;
+  for (idet=0; idet<N_DETECTORS; idet++)
+    {
+      int i = tid + bid*num_threads; 
+      while ( i < N_SAMPLES )
+	{
+	  ADC_TYPE adc = gpu_idata[idet*N_SAMPLES + i];
+	  atomicAdd( &(data->ADC[idet][adc]), 1);
+	  sum += adc;
+	  i += blockDim.x * gridDim.x;
+	}
+    }
+
+
+}
+#endif
+
+
+/** 
+ * Make a sum of waveforms
+ * 
+ * @param gpu_idata 
+ * @param gpu_odata 
+ */
+__global__
+void kernel_wf_sum(ADC_TYPE *gpu_idata, ADC_TYPE* gpu_odata)
+{
+  // access thread id
+  const unsigned int tid = threadIdx.x;
+  // access number of threads in this block
+  const unsigned int num_threads = blockDim.x;
+  // access block id
+  const unsigned int bid = blockIdx.x;
+  // global index
+  //const unsigned int sample_nr = bid*num_threads + tid;
+
+  GPU_AUX_DATA *auxdata = (GPU_AUX_DATA*) gpu_odata;
+  GPU_OUT_DATA *outdata = (GPU_OUT_DATA*) (auxdata+1);
+
+  int sample_nr = tid + bid*num_threads; 
+
+  while ( sample_nr < N_SAMPLES )
+    {
+      double adc_sum = 0;
+      unsigned int idet;
+      for (idet=0; idet<N_DETECTORS; idet++)
+	{
+	  //adc_sum += A_calib[idet]*(auxdata->pedestal[idet]-gpu_idata[idet*N_SAMPLES + sample_nr]);
+	  adc_sum += A_calib[idet]*(4000.0-gpu_idata[idet*N_SAMPLES + sample_nr]);
+	}      
+      auxdata->wf_sum[sample_nr] = adc_sum;
+
+      //auxdata->wf_sum[sample_nr] = 0;
+      //for (idet=0; idet<N_DETECTORS; idet++)
+      //auxdata->wf_sum[sample_nr] += auxdata->pedestal[idet]*100;
+      
+      // record island pattern
+      //const int adc_sum_threshold = 100;
+      const int adc_sum_threshold = 200;
+      if ( adc_sum > adc_sum_threshold )
+	{
+	  auxdata->island_pattern[sample_nr] = 1;
+	}
+
+      sample_nr += blockDim.x * gridDim.x;
+    }
+
+
+}
+
+__global__
+void kernel_extend_islands(ADC_TYPE *gpu_idata, ADC_TYPE* gpu_odata)
+{
+  // access thread id
+  const unsigned int tid = threadIdx.x;
+  // access number of threads in this block
+  const unsigned int num_threads = blockDim.x;
+  // access block id
+  const unsigned int bid = blockIdx.x;
+  // global index
+  //const unsigned int sample_nr = bid*num_threads + tid;
+
+  GPU_AUX_DATA *auxdata = (GPU_AUX_DATA*) gpu_odata;
+  GPU_OUT_DATA *outdata = (GPU_OUT_DATA*) (auxdata+1);
+
+  const int n_presamples = 10;
+  const int n_postsamples = 15;
+
+  int sample_nr = tid + bid*num_threads; 
+  while ( sample_nr < N_SAMPLES )
+    {
+      
+      int is_BOI = 0; // beginning of an island
+      int is_EOI = 0; // end of an island
+
+      // check the BOI and EOI conditions
+      if ( auxdata->island_pattern[sample_nr] > 0 )
+	{
+	  // check BOI condition
+	  if ( sample_nr == 0 ) 
+	    is_BOI=1;
+	  else
+	    if ( auxdata->island_pattern[sample_nr-1] == 0 )
+	      is_BOI=1;
+	  
+	   // check EOI condition
+	  if ( sample_nr == (N_SAMPLES-1) )
+	    is_EOI=1;
+	  else
+	    if ( auxdata->island_pattern[sample_nr+1] == 0 )
+	      is_EOI=1;
+	}
+	
+      if ( is_BOI )
+	{
+	  // This is a beginning of an island
+	  // extend the island for n_presamples
+	  int i1 = sample_nr - n_presamples;
+	  if ( i1 < 0 ) i1 = 0;
+	  int k;
+	  for (k=i1; k<sample_nr; k++)
+	    {
+	      atomicAdd( &(auxdata->island_pattern[k]), 1);		  
+	    }
+	}
+
+      // check the "End Of Island" condition
+      if ( is_EOI )
+	{
+	  // This is an end of an island
+	  // extend the island for n_postsamples
+	  int i2 = sample_nr + n_postsamples;
+	  if ( i2 >= N_SAMPLES ) i2 = N_SAMPLES-1;
+	  int k;
+	  for (k=i2; k>sample_nr; k--)
+	    {
+	      atomicAdd( &(auxdata->island_pattern[k]), 1);		  
+	    }
+	}
+
+      sample_nr += blockDim.x * gridDim.x;
+
+    }
+
+}
+
+__global__
+void kernel_find_islands(ADC_TYPE *gpu_idata, ADC_TYPE* gpu_odata)
+{
+  // access thread id
+  const unsigned int tid = threadIdx.x;
+  // access number of threads in this block
+  const unsigned int num_threads = blockDim.x;
+  // access block id
+  const unsigned int bid = blockIdx.x;
+  // global index
+  //const unsigned int sample_nr = bid*num_threads + tid;
+
+  GPU_AUX_DATA *auxdata = (GPU_AUX_DATA*) gpu_odata;
+  GPU_OUT_DATA *outdata = (GPU_OUT_DATA*) (auxdata+1);
+
+
+  //find new islands (some of the old island could have merged 
+  
+  int sample_nr = tid + bid*num_threads; 
+  while ( sample_nr < N_SAMPLES )
+    {
+
+      int is_BOI = 0; // beginning of an island
+
+      // check the BOI and EOI conditions
+      if ( auxdata->island_pattern[sample_nr] > 0 )
+	{
+	  // check BOI condition
+	  if ( sample_nr == 0 ) 
+	    is_BOI=1;
+	  else
+	    if ( auxdata->island_pattern[sample_nr-1] == 0 )
+	      is_BOI=1;
+	}
+
+
+      if ( is_BOI )
+	{
+	  // This is a beginning of an island
+	  
+	  // island number
+	  int island_nr = atomicAdd( &(outdata->n_islands), 1); 
+	  auxdata->island_info[island_nr].time = sample_nr;
+	  
+	  // determine the length of the island
+	  int i;
+	  int island_nr_aux = island_nr + 1;
+	  for (i=sample_nr; i<N_SAMPLES; i++)
+	    {
+	      if ( auxdata->island_pattern[i] == 0 )
+		{
+		  break;
+		}
+	      else
+		{
+		  auxdata->island_pattern[i] = island_nr_aux;
+		}
+	    }
+	  int island_len = i - sample_nr;
+	  // record the length into the first bin
+	  //data->island_pattern[sample_nr] = -island_len;
+	  auxdata->island_info[island_nr].length = island_len;
+	  int offset = atomicAdd( &(outdata->island_offset), 2 + N_DETECTORS*island_len);
+	  auxdata->island_info[island_nr].offset = offset;
+	  
+	  outdata->islands[offset]   = sample_nr;
+	  outdata->islands[offset+1] = island_len;
+	  
+	}
+
+      sample_nr += blockDim.x * gridDim.x; 
+    }
+
+}
+
+
+__global__
+void kernel_make_islands(ADC_TYPE *gpu_idata, ADC_TYPE* gpu_odata)
+{
+  // access thread id
+  const unsigned int tid = threadIdx.x;
+  // access number of threads in this block
+  const unsigned int num_threads = blockDim.x;
+  // access block id
+  const unsigned int bid = blockIdx.x;
+  // global index
+  //const unsigned int sample_nr = bid*num_threads + tid;
+
+  GPU_AUX_DATA *auxdata = (GPU_AUX_DATA*) gpu_odata;
+  GPU_OUT_DATA *outdata = (GPU_OUT_DATA*) (auxdata+1);
+
+
+  //find new islands (some of the old island could have merged 
+  
+  int sample_nr = tid + bid*num_threads; 
+  while ( sample_nr < N_SAMPLES )
+    {
+      int island_nr = auxdata->island_pattern[sample_nr];
+      if ( island_nr > 0 )
+	{
+	  island_nr--;
+	  int island_offset    = auxdata->island_info[island_nr].offset + 2; // +2 to skip time and length words
+	  int island_sample_nr = sample_nr - auxdata->island_info[island_nr].time;
+	  int island_length    = auxdata->island_info[island_nr].length;
+	  unsigned int idet;
+	  for (idet=0; idet<N_DETECTORS; idet++)
+	    {
+	      int i = island_offset + idet*island_length + island_sample_nr;
+	      outdata->islands[i] = gpu_idata[idet*N_SAMPLES + sample_nr];
+	    }
+	}
+      sample_nr += blockDim.x * gridDim.x; 
+    }
+
+#if 0
+  // record samples above a certain threshold
+  if ( cal_data->wf_sum.adc[sample_nr] < 8950 )
+    {
+      //cal_data->wf_sum_thr.adc[sample_nr] = cal_data->wf_sum.adc[sample_nr];
+    }
+#endif
+
+#if 0
+
+  sample_nr = tid + bid*num_threads; 
+  while ( sample_nr < N_SAMPLES )
+    {
+      auxdata->island_pattern[sample_nr] = sample_nr;
+      sample_nr += blockDim.x * gridDim.x; 
+    }
+#endif
+
+
+  /*
+  if ( tid == 1 && bid == 1 )
+    {
+      auxdata->island_pattern[0] = num_threads;
+      auxdata->island_pattern[1] = blockDim.x;
+      auxdata->island_pattern[2] = gridDim.x;
+      auxdata->island_pattern[3] = sizeof(int);
+    }
+  */
+}
+
+
+/** 
+ * Evaluate pedestals
+ * Use last 500 samples for averaging
+ * 
+ * @param gpu_idata 
+ * @param gpu_odata 
+ */
+__global__
+void kernel_make_pedestals(ADC_TYPE *gpu_idata, ADC_TYPE* gpu_odata)
+{
+
+  // access thread id
+  const unsigned int tid = threadIdx.x;
+  // access number of threads in this block
+  const unsigned int num_threads = blockDim.x;
+  // access block id
+  const unsigned int bid = blockIdx.x;
+
+  // global index
+ 
+  GPU_AUX_DATA *auxdata = (GPU_AUX_DATA*) gpu_odata;
+
+  int idet = bid;                // detector number 
+  //int idet = tid;                // detector number 
+  int offset = idet*N_SAMPLES;   // offset in the input data array
+
+  int i;
+  const int nsamples = 500;     // number of samples for averaging
+
+  double adc_mean = 0;
+  for (i=0; i<nsamples; i++)
+    {
+      adc_mean += gpu_idata[N_SAMPLES-i+offset]; // use last nsamples samples
+    }
+  adc_mean /= nsamples;
+  auxdata->pedestal[idet] = adc_mean;
+
+}
+
+
+
+
+__global__
+void kernel_decimate_sum( void* gpu_odata)
+{
+  // access thread id
+  const unsigned int tid = threadIdx.x;
+  // access number of threads in this block
+  const unsigned int num_threads = blockDim.x;
+  // access block id
+  const unsigned int bid = blockIdx.x;
+  // global index
+  //const unsigned int sample_nr = bid*num_threads + tid;
+
+  GPU_AUX_DATA *auxdata = (GPU_AUX_DATA*) gpu_odata;
+  GPU_OUT_DATA *outdata = (GPU_OUT_DATA*) (auxdata+1);
+
+  int sample_nr_1 = (tid + bid*num_threads)*DECIMATION;
+  int sample_nr_2 = sample_nr_1 + DECIMATION;
+  int i;
+  double adc_sum = 0;
+  for (i=sample_nr_1; i<sample_nr_2; i++)
+    {
+      adc_sum += auxdata->wf_sum[i];
+      break;
+    }
+  
+  // append the sum to the end of the output data
+  //int *data = (int*)(outdata) + (2 + outdata->island_offset*sizeof(int));
+  int *data = (int*)(outdata) + (2 + outdata->island_offset);
+  data[sample_nr_1/DECIMATION] = int(adc_sum);
+  //data[sample_nr_1/DECIMATION] = sample_nr_1/DECIMATION;
+
+}
+
+
+
+
+
+//void cuda_g2_run_kernel( unsigned char *gpu_idata, unsigned char *gpu_odata )
+void cuda_g2_run_kernel( unsigned char *gpu_idata, unsigned char *gpu_odata, 
+			 int *cpu_odata )
+{
+
+  const int n_threads_per_block = 256;
+  //int n_blocks = N_SAMPLES / n_threads_per_block;
+  int n_blocks = 480;
+  if ( n_blocks < 1 ) n_blocks = 1;
+  dim3  grid( n_blocks, 1, 1);
+  dim3  threads( n_threads_per_block, 1, 1);
+
+  // measure time
+#define TIME_MEASURE_DEF
+#ifdef TIME_MEASURE_DEF
+  cudaEvent_t start, stop;
+  cudaEvent_t start_all, stop_all;
+  float elapsedTime;
+  cudaEventCreate(&start);
+  cudaEventCreate(&stop);
+
+  cudaEventCreate(&start_all);
+  cudaEventCreate(&stop_all);
+  cudaEventRecord(start_all, 0);
+#endif // TIME_MEASURE_DEF
+
+
+  //printf("kernel: %d samples, %d blocks, %d threads per block, %d threads\n", N_SAMPLES, n_blocks, n_threads_per_block, n_blocks*n_threads_per_block);
+
+  // reset the output memory
+#ifdef TIME_MEASURE_DEF
+  // start event
+  cudaEventRecord(start, 0);
+#endif // TIME_MEASURE_DEF
+  cudaMemset( gpu_odata, 0, GPU_OBUF_SIZE);
+#ifdef TIME_MEASURE_DEF
+  cudaEventRecord(stop, 0);
+  cudaEventSynchronize(stop);
+  cudaEventElapsedTime(&elapsedTime, start, stop);
+  printf(" ::: GPU_OBUF reset time %f ms (%i MB)\n",elapsedTime, GPU_OBUF_SIZE/1024/1024);
+#endif // TIME_MEASURE_DEF
+
+
+#if 1
+  // evaluate pedestals
+#ifdef TIME_MEASURE_DEF
+  // start event
+  cudaEventRecord(start, 0);
+#endif // TIME_MEASURE_DEF
+  dim3  grid_1   ( 35, 1, 1);  // 35 blocks
+  dim3  threads_1(  1, 1, 1);  // 1 thread
+  kernel_make_pedestals<<< grid_1, threads_1>>>( (ADC_TYPE*)gpu_idata, (ADC_TYPE*)gpu_odata );
+#ifdef TIME_MEASURE_DEF
+  cudaEventRecord(stop, 0);
+  cudaEventSynchronize(stop);
+  cudaEventElapsedTime(&elapsedTime, start, stop);
+  printf(" ::: kernel_make_pedestals time %f ms\n",elapsedTime);
+#endif // TIME_MEASURE_DEF
+
+#endif
+  // make the distribution of ADC samples
+  // slow. Don't use this.
+  //kernel_wf_make_ADC<<< grid, threads>>>( (ADC_TYPE*)gpu_idata, (ADC_TYPE*)gpu_odata );
+
+
+
+#if 1
+  // Sum all waveforms
+#ifdef TIME_MEASURE_DEF
+  // start event
+  cudaEventRecord(start, 0);
+#endif // TIME_MEASURE_DEF
+  kernel_wf_sum<<< grid, threads>>>( (ADC_TYPE*)gpu_idata, (ADC_TYPE*)gpu_odata );
+#ifdef TIME_MEASURE_DEF
+  cudaEventRecord(stop, 0);
+  cudaEventSynchronize(stop);
+  cudaEventElapsedTime(&elapsedTime, start, stop);
+  printf(" ::: kernel_wf_sum time %f ms\n",elapsedTime);
+#endif // TIME_MEASURE_DEF
+#endif
+
+#if 1
+#ifdef TIME_MEASURE_DEF
+  // start event
+  cudaEventRecord(start, 0);
+#endif // TIME_MEASURE_DEF
+  // Extend islands by a predefined number of samples
+  kernel_extend_islands<<< grid, threads>>>( (ADC_TYPE*)gpu_idata, (ADC_TYPE*)gpu_odata );
+#ifdef TIME_MEASURE_DEF
+  cudaEventRecord(stop, 0);
+  cudaEventSynchronize(stop);
+  cudaEventElapsedTime(&elapsedTime, start, stop);
+  printf(" ::: kernel_extend_islands time %f ms\n",elapsedTime);
+#endif // TIME_MEASURE_DEF
+#endif
+  
+
+#if 1
+  // Find islands
+#ifdef TIME_MEASURE_DEF
+  // start event
+  cudaEventRecord(start, 0);
+#endif // TIME_MEASURE_DEF
+  kernel_find_islands<<< grid, threads>>>( (ADC_TYPE*)gpu_idata, (ADC_TYPE*)gpu_odata );
+#ifdef TIME_MEASURE_DEF
+  cudaEventRecord(stop, 0);
+  cudaEventSynchronize(stop);
+  cudaEventElapsedTime(&elapsedTime, start, stop);
+  printf(" ::: kernel_find_islands time %f ms\n",elapsedTime);
+#endif // TIME_MEASURE_DEF
+
+#endif
+
+#if 1
+  // Make islands
+#ifdef TIME_MEASURE_DEF
+  // start event
+  cudaEventRecord(start, 0);
+#endif // TIME_MEASURE_DEF
+  kernel_make_islands<<< grid, threads>>>( (ADC_TYPE*)gpu_idata, (ADC_TYPE*)gpu_odata );
+#ifdef TIME_MEASURE_DEF
+  cudaEventRecord(stop, 0);
+  cudaEventSynchronize(stop);
+  cudaEventElapsedTime(&elapsedTime, start, stop);
+  printf(" ::: kernel_make_islands time %f ms\n",elapsedTime);
+#endif // TIME_MEASURE_DEF
+#endif
+
+#if 1
+  // decimate the sum
+#ifdef TIME_MEASURE_DEF
+  // start event
+  cudaEventRecord(start, 0);
+#endif // TIME_MEASURE_DEF
+  int n_blocks_2 = N_SAMPLES/n_threads_per_block/DECIMATION;
+  dim3  grid_2( n_blocks_2, 1, 1);
+  dim3  threads_2( n_threads_per_block, 1, 1);
+  
+  kernel_decimate_sum<<< grid_2, threads_2>>>( gpu_odata );
+#ifdef TIME_MEASURE_DEF
+  cudaEventRecord(stop, 0);
+  cudaEventSynchronize(stop);
+  cudaEventElapsedTime(&elapsedTime, start, stop);
+  printf(" ::: kernel_decimate_sum time %f ms\n",elapsedTime);
+#endif // TIME_MEASURE_DEF
+#endif
+
+  
+  gpu_data_size = 0;
+
+#if 0
+  // dummy copy. Used to wait for kernels
+  int test;
+  cutilSafeCall( cudaMemcpy( &test, gpu_odata + sizeof(GPU_AUX_DATA), sizeof(int), 
+			     cudaMemcpyDeviceToHost) );
+#endif    
+
+#if 1
+  // copy data from GPU
+#ifdef TIME_MEASURE_DEF
+  // start event
+  cudaEventRecord(start, 0);
+#endif // TIME_MEASURE_DEF
+  //ADC_TYPE test;
+  //GPU_OUT_DATA data;
+  //int data_size;
+  cutilSafeCall( cudaMemcpy( &gpu_data_size, gpu_odata + sizeof(GPU_AUX_DATA), sizeof(int), 
+			     cudaMemcpyDeviceToHost) );
+
+  // include n_samples and data_size
+  gpu_data_size *= sizeof(int);
+  gpu_data_size += 2*sizeof(int);
+
+#ifdef TIME_MEASURE_DEF
+  cudaEventRecord(stop, 0);
+  cudaEventSynchronize(stop);
+  cudaEventElapsedTime(&elapsedTime, start, stop);
+  printf(" ::: copy data from GPU time %f ms\n",elapsedTime);
+#endif // TIME_MEASURE_DEF
+
+
+#if 1
+  // add decimated histogram
+  // We can also do this as modulo 24 in g-2 
+  // but for testing I do for every fill
+  gpu_data_size += N_SAMPLES/DECIMATION*sizeof(int);
+#endif
+  
+  printf("gpu data size: %i\n",gpu_data_size);
+  //printf("result: %i\n",data.n_islands);
+
+  if ( gpu_data_size > gpu_data_size_max )
+    {
+      printf("***ERROR! too large output gpu data! %i\n",gpu_data_size);
+      gpu_data_size = 8;
+    }
+
+  cutilSafeCall( cudaMemcpy( cpu_odata, gpu_odata + sizeof(GPU_AUX_DATA), gpu_data_size, 
+			     cudaMemcpyDeviceToHost) );
+  
+#endif
+
+#ifdef TIME_MEASURE_DEF
+
+  cudaEventRecord(stop_all, 0);
+  cudaEventSynchronize(stop_all);
+  cudaEventElapsedTime(&elapsedTime, start_all, stop_all);
+  printf("cuda_g2_run_kernel total elapsed time %f ms\n",elapsedTime);
+
+
+  // Clean up:
+  cudaEventDestroy(start);
+  cudaEventDestroy(stop);
+  cudaEventDestroy(start_all);
+  cudaEventDestroy(stop_all);
+#endif // TIME_MEASURE_DEF
+
+}
+
+
+
+
+#if 0
+__global__
+void kernel_wf_sum_make_islands( ADC_TYPE* gpu_idata, ADC* gpu_odata)
+{
+  // access thread id
+  const unsigned int tid = threadIdx.x;
+  // access number of threads in this block
+  const unsigned int num_threads = blockDim.x;
+  // access block id
+  const unsigned int bid = blockIdx.x;
+  // global index
+  const unsigned int sample_nr = bid*num_threads + tid;
+
+  CALORIMETER_DATA_BLOCK *cal_data = (CALORIMETER_DATA_BLOCK*) gpu_odata;
+
+  // If sample is zero finish.
+  // If sample is not zero, record 5 samples before and 10 after
+
+  if ( sample_nr >= WAVEFORM_LENGTH_MAX ) return;
+  
+  if ( cal_data->wf_sum_thr.adc[sample_nr] == 0 ) return;
+  
+  if ( sample_nr > 0 && sample_nr < (WAVEFORM_LENGTH_MAX-1) )
+    {
+      if ( cal_data->wf_sum_thr.adc[sample_nr-1] != 0 &&  cal_data->wf_sum_thr.adc[sample_nr+1] != 0 )
+	{
+	  return;
+	}
+    }
+
+
+  for (int i=1; i<7; i++)
+    {    
+      int s = sample_nr - i;
+      if ( s>=0 )
+	{
+	  cal_data->wf_sum_thr.adc[s] = cal_data->wf_sum.adc[s];
+	}
+    }
+  
+  for (int i=1; i<24; i++)
+    {    
+      int s = sample_nr + i;
+      if ( s < WAVEFORM_LENGTH_MAX )
+	{
+	  cal_data->wf_sum_thr.adc[s] = cal_data->wf_sum.adc[s];
+	}
+    }
+
+}
+
+
+__global__
+void kernel_wf_sum_glue_islands(unsigned char* gpu_odata)
+{
+
+  CALORIMETER_DATA_BLOCK *calo = (CALORIMETER_DATA_BLOCK*)gpu_odata;
+  unsigned int *adc = calo->wf_sum_thr.adc;
+
+  unsigned int i;
+  bool sample_active = false;
+  unsigned int N_islands = 0;
+  //unsigned int island_len = 0;  
+  unsigned int sample0 = 0;
+  unsigned int offset = 0;
+  // @todo replace WAVEFORM_LENGTH_MAX with actual wf length
+  for (i=0; i<WAVEFORM_LENGTH_MAX; i++)
+    {
+      unsigned int val = adc[i];
+      if ( val == 0 )
+	{
+	  if ( sample_active )
+	    {
+	      // finish sample
+	      calo->i_info[N_islands].sample0 = sample0;
+	      unsigned int island_len = i - sample0;  
+	      calo->i_info[N_islands].length = island_len;
+	      N_islands++;
+	      sample_active = false;
+	      offset += ALIGN8(ISLAND_HEADER_LEN + island_len*ADC_SAMPLE_LEN);
+	    }
+	}
+      else
+	{
+	  if ( sample_active )
+	    {
+	      // add new sample to the island
+	      //calo->
+	      ;
+	    }
+	  else
+	    {
+	      // start new island
+	      calo->i_info[N_islands].offset = offset;
+	      sample0 = i;
+	      sample_active = true;
+	    }
+	}
+    }
+  
+  calo->N_islands = N_islands;
+  calo->Islands_len_total = offset;
+
+}
+
+
+
+__global__
+void kernel_make_islands(unsigned char* gpu_odata)
+{
+  // access thread id
+  const unsigned int tid = threadIdx.x;
+  // access number of threads in this block
+  const unsigned int num_threads = blockDim.x;
+  // access block id
+  const unsigned int bid = blockIdx.x;
+  // global index
+  const unsigned int island_nr = bid*num_threads + tid;
+
+  CALORIMETER_DATA_BLOCK *cal_data = (CALORIMETER_DATA_BLOCK*) gpu_odata;
+
+  unsigned int N_islands = cal_data->N_islands;
+
+  if ( island_nr >= N_islands ) return;
+  //if ( island_nr > 1 ) return;
+
+  unsigned int sample0   = cal_data->i_info[island_nr].sample0;
+  unsigned int len       = cal_data->i_info[island_nr].length;
+  unsigned int offset    = cal_data->i_info[island_nr].offset;
+  unsigned int len_total = cal_data->Islands_len_total;
+
+  unsigned int iwf;
+#if 0
+  for (iwf=0; iwf<WAVEFORMS_NUM; iwf++)
+#endif
+#if 1
+  for (iwf=0; iwf<1; iwf++)
+#endif
+    {
+      /*
+      unsigned char *ptr = (unsigned char*) &(cal_data->island);
+      ISLAND_HEADER *island_header = (ISLAND_HEADER*)( ptr +  
+						       iwf*len_total
+						       + offset);
+      */
+      unsigned char *ptr = (unsigned char*) &(cal_data->island);
+      unsigned int *island = (unsigned int*)( ptr + iwf*len_total + offset );
+      //unsigned int *ptr_length  = ptr_sample0+1;
+      //island_nr*(sizeof(ISLAND)-sizeof(unsigned short int)) + 
+      //iwf*N_islands*(sizeof(ISLAND)-sizeof(unsigned short int));
+
+      island[0] = sample0;
+      island[1] = len;
+      //unsigned short int *adc_tgt = (unsigned short int*)(island_header+1);
+      //ptr = (unsigned char*)island_header; 
+      //unsigned short int *adc_tgt = (unsigned short int*)(ptr+sizeof(ISLAND_HEADER));
+      unsigned short int *adc_tgt = (unsigned short int*)(island+2);
+      unsigned short int *adc_src = cal_data->wf[iwf].adc;
+      //cal_data->wf_sum.adc[sample_nr] += cal_data->wf[i].adc[sample_nr];
+      unsigned int i;
+      for (i=0; i<len; i++)
+	{
+	  adc_tgt[i] = adc_src[sample0+i]; 
+	  //adc_tgt[i] = i+1;//adc_src[sample0+i]; 
+	}
+
+#if 0
+      island_header->length = 10;
+      island_header->sample0 = 20;
+#endif
+
+    }
+
+
+}
+
+#endif
+
+
+
+
+
+
+

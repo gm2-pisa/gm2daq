@@ -1,0 +1,20 @@
+#!/bin/sh
+killall mevb mlogger mhttpd frontend mtransition
+killall mevb mlogger mhttpd frontend mtransition
+killall -9 mevb mlogger mhttpd frontend mtransition
+killall -9 mevb mlogger mhttpd frontend mtransition
+#sudo killall mserver
+mcleanup
+mcleanup
+killall screen
+screen -wipe
+mcleanup
+mcleanup
+killall screen
+screen -wipe
+mcleanup
+mcleanup
+#screen -d -m -S mserver  sudo mserver
+screen -d -m -S mhttpd mhttpd -e CALSIM --mg 8081
+odbedit -e CALSIM -c clean
+odbedit -e CALSIM -c "stop now"

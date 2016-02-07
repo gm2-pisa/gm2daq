@@ -1,0 +1,13 @@
+# 
+# This AMC13Tool script generates local triggers at OrN spacing 0x100 for
+# 5 seconds, and then dumps the events to a file 'test.dat' in binary form
+#
+# Execute the AMC13Tool script which initializes the AMC13
+do init.amc
+# Execute the AMC13Tool script which generates the periodic triggers
+do periodicL1A_5sec.amc
+# Dump the saved events to 'test.dat'
+df test.dat
+# (quit this script file)
+q
+ 

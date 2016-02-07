@@ -1,0 +1,114 @@
+#
+# Makefile for building AMC13 code against the cactus/uhal library
+# *****THIS MAKEFILE IS ONLY SUPPORTED BY MANUAL BUILDS via checkout from the CACTUS SVN repository*****
+# -----------------------------------------------------------------------
+#
+#   This file must be run from the base directory of the amc13Standalone code and only supports
+#   non-RPM CACTUS installations.
+# 
+#   Your header files (.hh files) must go into a folder called: ./include/hcal/amc13
+#   Your source files (.cc and .cxx files) must go into a folder called: ./src/common/
+#
+#   IMPORTANT!! In order for this Makefile to work properly, you must set CACTUS_ROOT to the 
+#   location of your CACTUS root folder. This default Makefile assumes that you installed the 
+#   CACTUS code in your home directory. It this is not the case, you must change the CACTUS_ROOT path!
+#
+
+# The root folder for all the cactus code
+#CACTUS_ROOT = ${HOME}/trunk
+CACTUS_ROOT = /opt/cactus
+
+# Set the project home directory to the current directory
+AMC13_ROOT = $(shell pwd)
+
+include $(CACTUS_ROOT)/config/Makefile.macros
+
+# Include the headers in your project's include folder
+INCLUDES = $(wildcard include/.hh)
+
+# The include path is your own include directory and the cactus includes
+INCLUDE_PATH =  \
+                -Iinclude  \
+		-I${UHAL_LOG_INCLUDE_PREFIX} \
+		-I${UHAL_GRAMMARS_INCLUDE_PREFIX} \
+		-I${EXTERN_BOOST_INCLUDE_PREFIX} \
+		-I${EXTERN_PUGIXML_INCLUDE_PREFIX} \
+		-I${UHAL_UHAL_INCLUDE_PREFIX}
+
+
+# Set your library name here
+LIBNAME = uhalamc13
+
+LIBRARY = lib/lib${LIBNAME}.so
+LIBRARY_SOURCES = $(wildcard src/common/*.cc)
+LIBRARY_OBJECT_FILES = $(patsubst src/common/%.cc,obj/%.o,${LIBRARY_SOURCES})
+
+EXECUTABLE_SOURCES = $(wildcard src/common/*.cxx)
+EXECUTABLE_OBJECT_FILES = $(patsubst src/common/%.cxx,obj/%.o,${EXECUTABLE_SOURCES})
+EXECUTABLES = $(patsubst src/common/%.cxx,bin/%,${EXECUTABLE_SOURCES})
+
+LIBRARY_PATH =  \
+		-L${AMC13_ROOT}/lib \
+		-L${EXTERN_BOOST_LIB_PREFIX} \
+		-L${EXTERN_PUGIXML_LIB_PREFIX} \
+		-L${UHAL_LOG_LIB_PREFIX} \
+		-L${UHAL_GRAMMARS_LIB_PREFIX} \
+		-L${UHAL_UHAL_LIB_PREFIX}
+
+
+LIBRARIES =     \
+                -lpthread \
+                \
+                -lboost_filesystem \
+                -lboost_regex \
+                -lboost_system \
+                -lboost_thread \
+                \
+                -lcactus_extern_pugixml \
+                -lcactus_uhal_log \
+                -lcactus_uhal_grammars \
+                -lcactus_uhal_uhal \
+		\
+		-lreadline \
+		-lncurses
+
+
+CC_FLAGS = -O3 -Wall -fPIC -g ${INCLUDE_PATH}
+LINK_LIBRARY_FLAGS = -shared -fPIC -Wall -O3 ${LIBRARY_PATH} ${LIBRARIES}
+LINK_EXECUTABLE_FLAGS = -Wall -g -O3 ${LIBRARY_PATH} ${LIBRARIES} -l${LIBNAME}
+
+.PHONY: all _all build _buildall clean _cleanall
+
+default: build
+
+clean: _cleanall
+_cleanall:
+	rm -rf bin
+	rm -rf obj
+	rm -rf lib
+  
+all: _all
+build: _all
+buildall: _all
+_all: obj bin lib ${LIBRARY} ${EXECUTABLES}
+
+bin:
+	mkdir -p bin
+
+obj:
+	mkdir -p obj
+
+lib:
+	mkdir -p lib
+
+${EXECUTABLES}: bin/%: obj/%.o ${EXECUTABLE_OBJECT_FILES}
+	g++ ${LINK_EXECUTABLE_FLAGS}  $< -o $@
+
+${EXECUTABLE_OBJECT_FILES}: obj/%.o : src/common/%.cxx
+	g++ -c ${CC_FLAGS}  $< -o $@
+
+${LIBRARY}: ${LIBRARY_OBJECT_FILES}
+	g++ ${LINK_LIBRARY_FLAGS} ${LIBRARY_OBJECT_FILES} -o $@
+
+${LIBRARY_OBJECT_FILES}: obj/%.o : src/common/%.cc 
+	g++ -c ${CC_FLAGS} $< -o $@
